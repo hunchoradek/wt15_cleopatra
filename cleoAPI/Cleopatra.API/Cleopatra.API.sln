@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cleopatra.API", "Cleopatra.API\Cleopatra.API.csproj", "{E260235F-E27C-4283-BEF8-354C1BB2F71E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{932EA4DE-5699-4F5A-ADA4-C831BE2D5DFF} = {932EA4DE-5699-4F5A-ADA4-C831BE2D5DFF}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cleopatra.Domain", "Cleopatra.Domain\Cleopatra.Domain.csproj", "{14FAAEEF-A5C3-4CFF-93B5-2CF1D002EBAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cleopatra.Application", "Cleopatra.Application\Cleopatra.Application.csproj", "{932EA4DE-5699-4F5A-ADA4-C831BE2D5DFF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{14FAAEEF-A5C3-4CFF-93B5-2CF1D002EBAB} = {14FAAEEF-A5C3-4CFF-93B5-2CF1D002EBAB}
+		{42BD9253-EA40-4162-B234-714A60FC8424} = {42BD9253-EA40-4162-B234-714A60FC8424}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cleopatra.Infrastructure", "Cleopatra.Infrastructure\Cleopatra.Infrastructure.csproj", "{42BD9253-EA40-4162-B234-714A60FC8424}"
+	ProjectSection(ProjectDependencies) = postProject
+		{14FAAEEF-A5C3-4CFF-93B5-2CF1D002EBAB} = {14FAAEEF-A5C3-4CFF-93B5-2CF1D002EBAB}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E260235F-E27C-4283-BEF8-354C1BB2F71E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E260235F-E27C-4283-BEF8-354C1BB2F71E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E260235F-E27C-4283-BEF8-354C1BB2F71E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E260235F-E27C-4283-BEF8-354C1BB2F71E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14FAAEEF-A5C3-4CFF-93B5-2CF1D002EBAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14FAAEEF-A5C3-4CFF-93B5-2CF1D002EBAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14FAAEEF-A5C3-4CFF-93B5-2CF1D002EBAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14FAAEEF-A5C3-4CFF-93B5-2CF1D002EBAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{932EA4DE-5699-4F5A-ADA4-C831BE2D5DFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{932EA4DE-5699-4F5A-ADA4-C831BE2D5DFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{932EA4DE-5699-4F5A-ADA4-C831BE2D5DFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{932EA4DE-5699-4F5A-ADA4-C831BE2D5DFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42BD9253-EA40-4162-B234-714A60FC8424}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42BD9253-EA40-4162-B234-714A60FC8424}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42BD9253-EA40-4162-B234-714A60FC8424}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42BD9253-EA40-4162-B234-714A60FC8424}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D62FA177-CF4C-400F-8D97-4216CD77ADCF}
+	EndGlobalSection
+EndGlobal

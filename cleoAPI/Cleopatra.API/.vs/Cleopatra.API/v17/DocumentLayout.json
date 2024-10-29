@@ -1,0 +1,173 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E260235F-E27C-4283-BEF8-354C1BB2F71E}|Cleopatra.API\\Cleopatra.API.csproj|c:\\users\\radek\\documents\\wt15_cleopatra\\cleoapi\\cleopatra.api\\cleopatra.api\\controllers\\clientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E260235F-E27C-4283-BEF8-354C1BB2F71E}|Cleopatra.API\\Cleopatra.API.csproj|solutionrelative:cleopatra.api\\controllers\\clientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14FAAEEF-A5C3-4CFF-93B5-2CF1D002EBAB}|Cleopatra.Domain\\Cleopatra.Domain.csproj|c:\\users\\radek\\documents\\wt15_cleopatra\\cleoapi\\cleopatra.api\\cleopatra.domain\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14FAAEEF-A5C3-4CFF-93B5-2CF1D002EBAB}|Cleopatra.Domain\\Cleopatra.Domain.csproj|solutionrelative:cleopatra.domain\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42BD9253-EA40-4162-B234-714A60FC8424}|Cleopatra.Infrastructure\\Cleopatra.Infrastructure.csproj|c:\\users\\radek\\documents\\wt15_cleopatra\\cleoapi\\cleopatra.api\\cleopatra.infrastructure\\migrations\\20241029181221_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42BD9253-EA40-4162-B234-714A60FC8424}|Cleopatra.Infrastructure\\Cleopatra.Infrastructure.csproj|solutionrelative:cleopatra.infrastructure\\migrations\\20241029181221_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42BD9253-EA40-4162-B234-714A60FC8424}|Cleopatra.Infrastructure\\Cleopatra.Infrastructure.csproj|c:\\users\\radek\\documents\\wt15_cleopatra\\cleoapi\\cleopatra.api\\cleopatra.infrastructure\\cleopatra.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{42BD9253-EA40-4162-B234-714A60FC8424}|Cleopatra.Infrastructure\\Cleopatra.Infrastructure.csproj|solutionrelative:cleopatra.infrastructure\\cleopatra.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42BD9253-EA40-4162-B234-714A60FC8424}|Cleopatra.Infrastructure\\Cleopatra.Infrastructure.csproj|c:\\users\\radek\\documents\\wt15_cleopatra\\cleoapi\\cleopatra.api\\cleopatra.infrastructure\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42BD9253-EA40-4162-B234-714A60FC8424}|Cleopatra.Infrastructure\\Cleopatra.Infrastructure.csproj|solutionrelative:cleopatra.infrastructure\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E260235F-E27C-4283-BEF8-354C1BB2F71E}|Cleopatra.API\\Cleopatra.API.csproj|c:\\users\\radek\\documents\\wt15_cleopatra\\cleoapi\\cleopatra.api\\cleopatra.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E260235F-E27C-4283-BEF8-354C1BB2F71E}|Cleopatra.API\\Cleopatra.API.csproj|solutionrelative:cleopatra.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E260235F-E27C-4283-BEF8-354C1BB2F71E}|Cleopatra.API\\Cleopatra.API.csproj|c:\\users\\radek\\documents\\wt15_cleopatra\\cleoapi\\cleopatra.api\\cleopatra.api\\cleopatra.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{E260235F-E27C-4283-BEF8-354C1BB2F71E}|Cleopatra.API\\Cleopatra.API.csproj|solutionrelative:cleopatra.api\\cleopatra.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E260235F-E27C-4283-BEF8-354C1BB2F71E}|Cleopatra.API\\Cleopatra.API.csproj|c:\\users\\radek\\documents\\wt15_cleopatra\\cleoapi\\cleopatra.api\\cleopatra.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E260235F-E27C-4283-BEF8-354C1BB2F71E}|Cleopatra.API\\Cleopatra.API.csproj|solutionrelative:cleopatra.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{932EA4DE-5699-4F5A-ADA4-C831BE2D5DFF}|Cleopatra.Application\\Cleopatra.Application.csproj|c:\\users\\radek\\documents\\wt15_cleopatra\\cleoapi\\cleopatra.api\\cleopatra.application\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{932EA4DE-5699-4F5A-ADA4-C831BE2D5DFF}|Cleopatra.Application\\Cleopatra.Application.csproj|solutionrelative:cleopatra.application\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "20241029181221_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.Infrastructure\\Migrations\\20241029181221_InitialCreate.cs",
+              "RelativeDocumentMoniker": "Cleopatra.Infrastructure\\Migrations\\20241029181221_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.Infrastructure\\Migrations\\20241029181221_InitialCreate.cs",
+              "RelativeToolTip": "Cleopatra.Infrastructure\\Migrations\\20241029181221_InitialCreate.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T18:22:21.244Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Cleopatra.Infrastructure",
+              "DocumentMoniker": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.Infrastructure\\Cleopatra.Infrastructure.csproj",
+              "RelativeDocumentMoniker": "Cleopatra.Infrastructure\\Cleopatra.Infrastructure.csproj",
+              "ToolTip": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.Infrastructure\\Cleopatra.Infrastructure.csproj",
+              "RelativeToolTip": "Cleopatra.Infrastructure\\Cleopatra.Infrastructure.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-10-29T18:11:52.998Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ClientsController.cs",
+              "DocumentMoniker": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.API\\Controllers\\ClientsController.cs",
+              "RelativeDocumentMoniker": "Cleopatra.API\\Controllers\\ClientsController.cs",
+              "ToolTip": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.API\\Controllers\\ClientsController.cs",
+              "RelativeToolTip": "Cleopatra.API\\Controllers\\ClientsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T18:04:01.635Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Cleopatra.API",
+              "DocumentMoniker": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.API\\Cleopatra.API.csproj",
+              "RelativeDocumentMoniker": "Cleopatra.API\\Cleopatra.API.csproj",
+              "ToolTip": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.API\\Cleopatra.API.csproj",
+              "RelativeToolTip": "Cleopatra.API\\Cleopatra.API.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-10-29T18:02:30.802Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.API\\Program.cs",
+              "RelativeDocumentMoniker": "Cleopatra.API\\Program.cs",
+              "ToolTip": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.API\\Program.cs",
+              "RelativeToolTip": "Cleopatra.API\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T17:58:39.11Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.API\\appsettings.json",
+              "RelativeDocumentMoniker": "Cleopatra.API\\appsettings.json",
+              "ToolTip": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.API\\appsettings.json",
+              "RelativeToolTip": "Cleopatra.API\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABRAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-29T17:57:13.443Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DataContext.cs",
+              "DocumentMoniker": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.Infrastructure\\DataContext.cs",
+              "RelativeDocumentMoniker": "Cleopatra.Infrastructure\\DataContext.cs",
+              "ToolTip": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.Infrastructure\\DataContext.cs",
+              "RelativeToolTip": "Cleopatra.Infrastructure\\DataContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T17:49:36.297Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Client.cs",
+              "DocumentMoniker": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.Domain\\Client.cs",
+              "RelativeDocumentMoniker": "Cleopatra.Domain\\Client.cs",
+              "ToolTip": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.Domain\\Client.cs",
+              "RelativeToolTip": "Cleopatra.Domain\\Client.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T17:42:43.653Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.Application\\Class1.cs",
+              "RelativeDocumentMoniker": "Cleopatra.Application\\Class1.cs",
+              "ToolTip": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.Application\\Class1.cs",
+              "RelativeToolTip": "Cleopatra.Application\\Class1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T17:34:41.429Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

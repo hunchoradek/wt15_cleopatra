@@ -1,0 +1,12 @@
+C:\Users\Radek\Documents\wt15_cleopatra\cleoAPI\Cleopatra.API\Cleopatra.Domain\bin\Debug\net8.0\Cleopatra.Domain.deps.json
+C:\Users\Radek\Documents\wt15_cleopatra\cleoAPI\Cleopatra.API\Cleopatra.Domain\bin\Debug\net8.0\Cleopatra.Domain.dll
+C:\Users\Radek\Documents\wt15_cleopatra\cleoAPI\Cleopatra.API\Cleopatra.Domain\bin\Debug\net8.0\Cleopatra.Domain.pdb
+C:\Users\Radek\Documents\wt15_cleopatra\cleoAPI\Cleopatra.API\Cleopatra.Domain\obj\Debug\net8.0\Cleopatra.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Radek\Documents\wt15_cleopatra\cleoAPI\Cleopatra.API\Cleopatra.Domain\obj\Debug\net8.0\Cleopatra.Domain.AssemblyInfoInputs.cache
+C:\Users\Radek\Documents\wt15_cleopatra\cleoAPI\Cleopatra.API\Cleopatra.Domain\obj\Debug\net8.0\Cleopatra.Domain.AssemblyInfo.cs
+C:\Users\Radek\Documents\wt15_cleopatra\cleoAPI\Cleopatra.API\Cleopatra.Domain\obj\Debug\net8.0\Cleopatra.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Radek\Documents\wt15_cleopatra\cleoAPI\Cleopatra.API\Cleopatra.Domain\obj\Debug\net8.0\Cleopatra.Domain.sourcelink.json
+C:\Users\Radek\Documents\wt15_cleopatra\cleoAPI\Cleopatra.API\Cleopatra.Domain\obj\Debug\net8.0\Cleopatra.Domain.dll
+C:\Users\Radek\Documents\wt15_cleopatra\cleoAPI\Cleopatra.API\Cleopatra.Domain\obj\Debug\net8.0\refint\Cleopatra.Domain.dll
+C:\Users\Radek\Documents\wt15_cleopatra\cleoAPI\Cleopatra.API\Cleopatra.Domain\obj\Debug\net8.0\Cleopatra.Domain.pdb
+C:\Users\Radek\Documents\wt15_cleopatra\cleoAPI\Cleopatra.API\Cleopatra.Domain\obj\Debug\net8.0\ref\Cleopatra.Domain.dll

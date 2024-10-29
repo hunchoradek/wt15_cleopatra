@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Cleopatra.Domain\Cleopatra.Domain.csproj" />
+    <ProjectReference Include="..\Cleopatra.Infrastructure\Cleopatra.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
