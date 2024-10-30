@@ -19,5 +19,9 @@ namespace Cleopatra.Domain
         [MaxLength(100)]
         public string? email { get; set; }
         public string? notes { get; set; }
+
+        // Navigation property
+        public ICollection<Notification> Notifications { get; set; }
+    
     }
 }

@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Cleopatra.Infrastructure;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,6 +22,15 @@ builder.Services.AddCors(options =>
         policy.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
     });
 });
+
+builder.Services.AddControllers()
+        .AddJsonOptions(options =>
+        {
+            options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve;
+            options.JsonSerializerOptions.MaxDepth = 64; // Increase the maximum depth if needed
+        });
+
+
 
 var app = builder.Build();
 

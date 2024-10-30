@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Cleopatra.API",
+    "\\Cleopatra.Application",
+    "\\Cleopatra.Domain",
+    "\\Cleopatra.Infrastructure"
+  ],
+  "SelectedNode": "\\Cleopatra.Domain",
+  "PreviewInSolutionExplorer": false
+}
