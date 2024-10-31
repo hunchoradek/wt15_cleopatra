@@ -19,35 +19,35 @@
       "RelativeMoniker": "D:0:0:{E260235F-E27C-4283-BEF8-354C1BB2F71E}|Cleopatra.API\\Cleopatra.API.csproj|solutionrelative:cleopatra.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{14FAAEEF-A5C3-4CFF-93B5-2CF1D002EBAB}|Cleopatra.Domain\\Cleopatra.Domain.csproj|c:\\users\\radek\\documents\\wt15_cleopatra\\cleoapi\\cleopatra.api\\cleopatra.domain\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{14FAAEEF-A5C3-4CFF-93B5-2CF1D002EBAB}|Cleopatra.Domain\\Cleopatra.Domain.csproj|C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\cleopatra.domain\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{14FAAEEF-A5C3-4CFF-93B5-2CF1D002EBAB}|Cleopatra.Domain\\Cleopatra.Domain.csproj|solutionrelative:cleopatra.domain\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{14FAAEEF-A5C3-4CFF-93B5-2CF1D002EBAB}|Cleopatra.Domain\\Cleopatra.Domain.csproj|c:\\users\\radek\\documents\\wt15_cleopatra\\cleoapi\\cleopatra.api\\cleopatra.domain\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{14FAAEEF-A5C3-4CFF-93B5-2CF1D002EBAB}|Cleopatra.Domain\\Cleopatra.Domain.csproj|C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\cleopatra.domain\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{14FAAEEF-A5C3-4CFF-93B5-2CF1D002EBAB}|Cleopatra.Domain\\Cleopatra.Domain.csproj|solutionrelative:cleopatra.domain\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E260235F-E27C-4283-BEF8-354C1BB2F71E}|Cleopatra.API\\Cleopatra.API.csproj|c:\\users\\radek\\documents\\wt15_cleopatra\\cleoapi\\cleopatra.api\\cleopatra.api\\controllers\\notificationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E260235F-E27C-4283-BEF8-354C1BB2F71E}|Cleopatra.API\\Cleopatra.API.csproj|C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\cleopatra.api\\controllers\\notificationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E260235F-E27C-4283-BEF8-354C1BB2F71E}|Cleopatra.API\\Cleopatra.API.csproj|solutionrelative:cleopatra.api\\controllers\\notificationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E260235F-E27C-4283-BEF8-354C1BB2F71E}|Cleopatra.API\\Cleopatra.API.csproj|c:\\users\\radek\\documents\\wt15_cleopatra\\cleoapi\\cleopatra.api\\cleopatra.api\\controllers\\recourcescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E260235F-E27C-4283-BEF8-354C1BB2F71E}|Cleopatra.API\\Cleopatra.API.csproj|C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\cleopatra.api\\controllers\\recourcescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E260235F-E27C-4283-BEF8-354C1BB2F71E}|Cleopatra.API\\Cleopatra.API.csproj|solutionrelative:cleopatra.api\\controllers\\recourcescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{14FAAEEF-A5C3-4CFF-93B5-2CF1D002EBAB}|Cleopatra.Domain\\Cleopatra.Domain.csproj|c:\\users\\radek\\documents\\wt15_cleopatra\\cleoapi\\cleopatra.api\\cleopatra.domain\\resource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{14FAAEEF-A5C3-4CFF-93B5-2CF1D002EBAB}|Cleopatra.Domain\\Cleopatra.Domain.csproj|C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\cleopatra.domain\\resource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{14FAAEEF-A5C3-4CFF-93B5-2CF1D002EBAB}|Cleopatra.Domain\\Cleopatra.Domain.csproj|solutionrelative:cleopatra.domain\\resource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E260235F-E27C-4283-BEF8-354C1BB2F71E}|Cleopatra.API\\Cleopatra.API.csproj|c:\\users\\radek\\documents\\wt15_cleopatra\\cleoapi\\cleopatra.api\\cleopatra.api\\controllers\\servicescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E260235F-E27C-4283-BEF8-354C1BB2F71E}|Cleopatra.API\\Cleopatra.API.csproj|C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\cleopatra.api\\controllers\\servicescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E260235F-E27C-4283-BEF8-354C1BB2F71E}|Cleopatra.API\\Cleopatra.API.csproj|solutionrelative:cleopatra.api\\controllers\\servicescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{14FAAEEF-A5C3-4CFF-93B5-2CF1D002EBAB}|Cleopatra.Domain\\Cleopatra.Domain.csproj|c:\\users\\radek\\documents\\wt15_cleopatra\\cleoapi\\cleopatra.api\\cleopatra.domain\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{14FAAEEF-A5C3-4CFF-93B5-2CF1D002EBAB}|Cleopatra.Domain\\Cleopatra.Domain.csproj|C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\cleopatra.domain\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{14FAAEEF-A5C3-4CFF-93B5-2CF1D002EBAB}|Cleopatra.Domain\\Cleopatra.Domain.csproj|solutionrelative:cleopatra.domain\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E260235F-E27C-4283-BEF8-354C1BB2F71E}|Cleopatra.API\\Cleopatra.API.csproj|c:\\users\\radek\\documents\\wt15_cleopatra\\cleoapi\\cleopatra.api\\cleopatra.api\\controllers\\clientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E260235F-E27C-4283-BEF8-354C1BB2F71E}|Cleopatra.API\\Cleopatra.API.csproj|C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\cleopatra.api\\controllers\\clientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E260235F-E27C-4283-BEF8-354C1BB2F71E}|Cleopatra.API\\Cleopatra.API.csproj|solutionrelative:cleopatra.api\\controllers\\clientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -90,8 +90,7 @@
               "RelativeToolTip": "Cleopatra.Domain\\Notification.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T21:27:22.235Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-29T21:27:22.235Z"
             },
             {
               "$type": "Document",
@@ -103,8 +102,7 @@
               "RelativeToolTip": "Cleopatra.API\\Controllers\\RecourcesController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T21:26:17.159Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-29T21:26:17.159Z"
             },
             {
               "$type": "Document",
@@ -116,8 +114,7 @@
               "RelativeToolTip": "Cleopatra.Domain\\Resource.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T21:24:55.043Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-29T21:24:55.043Z"
             },
             {
               "$type": "Document",
@@ -129,8 +126,7 @@
               "RelativeToolTip": "Cleopatra.API\\Controllers\\ServicesController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T21:22:41.109Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-29T21:22:41.109Z"
             },
             {
               "$type": "Document",
@@ -142,8 +138,7 @@
               "RelativeToolTip": "Cleopatra.Domain\\Service.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T21:20:34.103Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-29T21:20:34.103Z"
             },
             {
               "$type": "Document",
@@ -168,8 +163,7 @@
               "RelativeToolTip": "Cleopatra.Domain\\Client.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAABEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T17:42:43.653Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-29T17:42:43.653Z"
             },
             {
               "$type": "Document",
@@ -181,8 +175,7 @@
               "RelativeToolTip": "Cleopatra.Infrastructure\\DataContext.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T17:49:36.297Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-29T17:49:36.297Z"
             },
             {
               "$type": "Document",
@@ -194,8 +187,7 @@
               "RelativeToolTip": "Cleopatra.API\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAABUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T17:58:39.11Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-29T17:58:39.11Z"
             },
             {
               "$type": "Document",
@@ -207,8 +199,7 @@
               "RelativeToolTip": "Cleopatra.Domain\\Appointment.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAAA4AAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T21:11:42.925Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-29T21:11:42.925Z"
             },
             {
               "$type": "Document",
@@ -220,8 +211,7 @@
               "RelativeToolTip": "Cleopatra.API\\Controllers\\NotificationsController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAC8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T21:30:18.667Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-29T21:30:18.667Z"
             },
             {
               "$type": "Document",
@@ -233,8 +223,7 @@
               "RelativeToolTip": "Cleopatra.API\\Controllers\\ClientsController.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAAAkAAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T18:04:01.635Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-29T18:04:01.635Z"
             },
             {
               "$type": "Document",
