@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9d8BHMWGB0nRgMXrITiARVvB5XUq5xLt1RjgqDFwZWF1wStVdzPnrV8ixbFgNKi2n27KUdZ00t4svtDrTWld/w==",
+  "dgSpecHash": "AO9W8CVI7XNnkH78FjXE4DgCCfXarPihxoticmDoKcr3e/4lV4MSEJKTdFazQ43LF6NYTJFXLeD2keCBbDTD/A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Radek\\Desktop\\wt15_cleopatra-main\\cleoAPI\\Cleopatra.API\\Cleopatra.Application\\Cleopatra.Application.csproj",
+  "projectFilePath": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.Application\\Cleopatra.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Radek\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.10\\microsoft.entityframeworkcore.8.0.10.nupkg.sha512",
     "C:\\Users\\Radek\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.10\\microsoft.entityframeworkcore.abstractions.8.0.10.nupkg.sha512",

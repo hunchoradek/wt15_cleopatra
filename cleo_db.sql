@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 22, 2025 at 11:53 PM
+-- Generation Time: Jan 23, 2025 at 06:41 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -219,17 +219,15 @@ INSERT INTO `notifications` (`notification_id`, `client_id`, `type`, `content`, 
 CREATE TABLE `reports` (
   `report_id` int(11) NOT NULL,
   `type` varchar(50) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
-  `file_path` varchar(255) NOT NULL
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `reports`
 --
 
-INSERT INTO `reports` (`report_id`, `type`, `created_at`, `file_path`) VALUES
-(1, 'Raport dzienny', '2024-11-02 17:00:00', '/reports/daily_report_2024_11_02.pdf'),
-(2, 'Raport tygodniowy', '2024-11-06 17:00:00', '/reports/weekly_report_2024_11_06.pdf');
+INSERT INTO `reports` (`report_id`, `type`, `created_at`) VALUES
+(3, 'Client', '2025-01-23 16:08:44');
 
 -- --------------------------------------------------------
 
@@ -474,7 +472,7 @@ ALTER TABLE `notifications`
 -- AUTO_INCREMENT for table `reports`
 --
 ALTER TABLE `reports`
-  MODIFY `report_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `report_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `resources`

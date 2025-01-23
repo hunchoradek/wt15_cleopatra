@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Y3EFNjXviYJQ1DF2IuV7tHbrcoOu206Fpkuwatp2Z1hUcCSokhBSFmMhAXgRoNUrxH3wnHwRLEVyXN74hq6FsA==",
+  "dgSpecHash": "Bgrth9jXNUhhzUICbBIuPSEg64VCY6QwnpWSa2k8WDPH5L+oGQLIJ+r9TBJLQdnv7dke7sIFZl9q9EZnOlIJ5g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Radek\\Desktop\\wt15_cleopatra-main\\cleoAPI\\Cleopatra.API\\Cleopatra.Infrastructure\\Cleopatra.Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.Infrastructure\\Cleopatra.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Radek\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Radek\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",

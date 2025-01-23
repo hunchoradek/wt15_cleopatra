@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Cleopatra.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4b54ceca2f7ac7a217187a910e876916234f47d5")]
 [assembly: System.Reflection.AssemblyProductAttribute("Cleopatra.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Cleopatra.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -13,11 +13,13 @@ namespace Cleopatra.Infrastructure
         public DbSet<Service> Services { get; set; }
         public DbSet<Resource> Resources { get; set; }
         public DbSet<Notification> Notifications { get; set; }
+        public DbSet<Report> Reports { get; set; }
 
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Vacation> Vacations { get; set; }
         public DbSet<Business> Business { get; set; }
         public DbSet<ServiceCategory> ServiceCategories { get; set; } // Dodaj to
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Radek\\Desktop\\wt15_cleopatra-main\\cleoAPI\\Cleopatra.API\\Cleopatra.Domain\\Cleopatra.Domain.csproj": {}
+    "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.Domain\\Cleopatra.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Radek\\Desktop\\wt15_cleopatra-main\\cleoAPI\\Cleopatra.API\\Cleopatra.Domain\\Cleopatra.Domain.csproj": {
+    "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.Domain\\Cleopatra.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Radek\\Desktop\\wt15_cleopatra-main\\cleoAPI\\Cleopatra.API\\Cleopatra.Domain\\Cleopatra.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.Domain\\Cleopatra.Domain.csproj",
         "projectName": "Cleopatra.Domain",
-        "projectPath": "C:\\Users\\Radek\\Desktop\\wt15_cleopatra-main\\cleoAPI\\Cleopatra.API\\Cleopatra.Domain\\Cleopatra.Domain.csproj",
+        "projectPath": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.Domain\\Cleopatra.Domain.csproj",
         "packagesPath": "C:\\Users\\Radek\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Radek\\Desktop\\wt15_cleopatra-main\\cleoAPI\\Cleopatra.API\\Cleopatra.Domain\\obj\\",
+        "outputPath": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
