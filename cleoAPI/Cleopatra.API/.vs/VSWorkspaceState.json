@@ -2,10 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\Cleopatra.API",
+    "\\Cleopatra.API\\Controllers",
     "\\Cleopatra.Application",
     "\\Cleopatra.Domain",
     "\\Cleopatra.Infrastructure"
   ],
-  "SelectedNode": "\\Cleopatra.Domain",
+  "SelectedNode": "\\Cleopatra.API.sln",
   "PreviewInSolutionExplorer": false
 }

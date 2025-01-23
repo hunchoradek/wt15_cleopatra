@@ -4,6 +4,7 @@ using Cleopatra.Infrastructure;
 using Cleopatra.Domain;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Cleopatra.API.Controllers
 {
@@ -19,6 +20,7 @@ namespace Cleopatra.API.Controllers
         }
 
         [HttpGet]
+        [Authorize(Policy = "ManagerOnly")]
         public async Task<ActionResult<IEnumerable<Notification>>> GetNotifications()
         {
             var notifications = await _context.Notifications
@@ -28,6 +30,7 @@ namespace Cleopatra.API.Controllers
         }
 
         [HttpGet("{id}")]
+        [Authorize(Policy = "ManagerOnly")]
         public async Task<ActionResult<Notification>> GetNotification(int id)
         {
             var notification = await _context.Notifications
@@ -39,6 +42,7 @@ namespace Cleopatra.API.Controllers
         }
 
         [HttpPost]
+        [Authorize(Policy = "ManagerOnly")]
         public async Task<ActionResult<Notification>> AddNotification(Notification notification)
         {
             _context.Notifications.Add(notification);
@@ -47,6 +51,7 @@ namespace Cleopatra.API.Controllers
         }
 
         [HttpPut("{id}")]
+        [Authorize(Policy = "ManagerOnly")]
         public async Task<IActionResult> UpdateNotification(int id, Notification notification)
         {
             if (id != notification.notification_id) return BadRequest();
@@ -56,6 +61,7 @@ namespace Cleopatra.API.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Policy = "ManagerOnly")]
         public async Task<IActionResult> DeleteNotification(int id)
         {
             var notification = await _context.Notifications.FindAsync(id);

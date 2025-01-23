@@ -1,4 +1,5 @@
-from flask import Flask, send_file
+from flask import Flask, send_file, render_template, request, redirect, url_for, make_response, session
+from flask_login import LoginManager, UserMixin, login_user, logout_user, login_required, current_user
 from reportlab.lib.pagesizes import A4
 from reportlab.pdfgen import canvas
 from reportlab.pdfbase.ttfonts import TTFont
@@ -14,11 +15,32 @@ import os
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 app = Flask(__name__)
+app.secret_key = "supersecretkey"
 
-API_BASE_URL = "https://localhost:7057/api"
+API_BASE_URL = "https://localhost:7057"
+
+# Flask-Login Setup
+login_manager = LoginManager()
+login_manager.init_app(app)
+login_manager.login_view = "login"
+
+# Simulated User class for Flask-Login
+class User(UserMixin):
+    def __init__(self, user_id, username, role):
+        self.id = user_id
+        self.username = username
+        self.role = role
+
+@login_manager.user_loader
+def load_user(user_id):
+    # Here, you'd typically fetch the user from your database or API
+    session_data = session.get("user")
+    if session_data and str(session_data["id"]) == user_id:
+        return User(session_data["id"], session_data["username"], session_data["role"])
+    return None
 
 def fetch_data_from_api(endpoint):
-    response = requests.get(f"{API_BASE_URL}/{endpoint}", verify=False)
+    response = requests.get(f"{API_BASE_URL}/api{endpoint}", verify=False)
     if response.status_code == 200:
         return response.json()
     else:
@@ -28,8 +50,55 @@ def fetch_data_from_api(endpoint):
 def hello_world():
     return 'Hello, World!'
 
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+        
+        print(f"Logging in with username: {username} and password: {password}")
+        
+        # Wywołanie API do logowania
+        response = requests.post(f"{API_BASE_URL}/auth/Login", json={
+            "username": username,
+            "password": password
+        }, verify=False)
+        
+        print(f"API response status code: {response.status_code}")
+        print(f"API response content: {response.content}")
+        
+        if response.status_code == 200:
+            user_data = response.json()
+            print(f"user_data: {user_data}")  # Dodajemy to, aby zobaczyć zawartość user_data
+            user = User(user_data["id"], user_data["username"], user_data["role"])
+            login_user(user)
+            session["user"] = {"id": user.id, "username": user.username, "role": user.role}
+            return redirect(url_for("generate_report"))
+        else:
+            return "Invalid credentials", 401
+
+    return '''
+    <form method="post">
+        Username: <input type="text" name="username"><br>
+        Password: <input type="password" name="password"><br>
+        <input type="submit" value="Login">
+    </form>
+    '''
+
+@app.route('/logout')
+@login_required
+def logout():
+    logout_user()
+    session.pop("user", None)
+    return redirect(url_for("login"))
+
+
 @app.route('/generate_report')
+@login_required
 def generate_report():
+    if current_user.role != "manager":
+        return "Access denied: Only managers can generate reports.", 403
+    
     clients = fetch_data_from_api("Clients")
     appointments = fetch_data_from_api("Appointments")
     services = fetch_data_from_api("Services")

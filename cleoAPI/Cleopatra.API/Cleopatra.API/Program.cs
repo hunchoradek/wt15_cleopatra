@@ -1,6 +1,7 @@
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Cleopatra.Infrastructure;
 using System.Text.Json.Serialization;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,6 +24,21 @@ builder.Services.AddCors(options =>
     });
 });
 
+// Dodaj usługi uwierzytelniania
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options =>
+    {
+        options.LoginPath = "/auth/login";
+        options.LogoutPath = "/auth/logout";
+        options.Cookie.Name = "CleopatraAuth"; 
+        options.Cookie.HttpOnly = true;
+    });
+
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("ManagerOnly", policy => policy.RequireRole("manager"));
+});
+
 builder.Services.AddControllers()
         .AddJsonOptions(options =>
         {
@@ -43,6 +59,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.UseCors("AllowAll");

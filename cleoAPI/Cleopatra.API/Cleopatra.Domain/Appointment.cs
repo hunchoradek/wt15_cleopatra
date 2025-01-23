@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Salon.Domain;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Cleopatra.Domain
@@ -12,18 +13,22 @@ namespace Cleopatra.Domain
         public int client_id { get; set; }
 
         [ForeignKey("client_id")]
-        public Client client { get; set; }
+        public Client Client { get; set; }
 
         [Required]
-        [MaxLength(100)]
+        public int employee_id { get; set; } // Dodaj to pole
+
+        [ForeignKey("employee_id")]
+        public Employee Employee { get; set; } // Powiązanie z pracownikiem
+
+        [Required]
         public string employee_name { get; set; }
 
         [Required]
-        [MaxLength(100)]
         public string service { get; set; }
 
         [Required]
-        public DateTime appointment_date { get; set; }
+        public DateTime appointment_date { get; set; } // Dodaj to pole
 
         [Required]
         public TimeSpan start_time { get; set; }
@@ -31,10 +36,7 @@ namespace Cleopatra.Domain
         [Required]
         public TimeSpan end_time { get; set; }
 
-        public string? status { get; set; }
+        public string status { get; set; }
         public string? notes { get; set; }
-
-
     }
 }
-

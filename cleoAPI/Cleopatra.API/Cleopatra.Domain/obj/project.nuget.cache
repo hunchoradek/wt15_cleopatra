@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HbWMQZZVTjFurszpJaNcO+gg3nw/5XVDrBp9yZ+svAdqNbD/ikCuG7CO6f+uDqVwNYslep7SY3L1GAknoT3e5Q==",
+  "dgSpecHash": "vvpZG/LKuN76apGbYSE0LaJwE1qjptXIJoa6W/juzpn2Sd1XPoMQrAHWiLo/rDts7qrVB240pSlymt9CgHEOGA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.Domain\\Cleopatra.Domain.csproj",
+  "projectFilePath": "C:\\Users\\Radek\\Desktop\\wt15_cleopatra-main\\cleoAPI\\Cleopatra.API\\Cleopatra.Domain\\Cleopatra.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

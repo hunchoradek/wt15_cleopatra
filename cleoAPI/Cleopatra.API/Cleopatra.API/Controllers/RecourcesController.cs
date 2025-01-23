@@ -4,6 +4,7 @@ using Cleopatra.Infrastructure;
 using Cleopatra.Domain;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Cleopatra.API.Controllers
 {
@@ -19,6 +20,7 @@ namespace Cleopatra.API.Controllers
         }
 
         [HttpGet]
+        [Authorize(Policy = "ManagerOnly")]
         public async Task<ActionResult<IEnumerable<Resource>>> GetResources()
         {
             var resources = await _context.Resources.ToListAsync();
@@ -26,6 +28,7 @@ namespace Cleopatra.API.Controllers
         }
 
         [HttpGet("{id}")]
+        [Authorize(Policy = "ManagerOnly")]
         public async Task<ActionResult<Resource>> GetResource(int id)
         {
             var resource = await _context.Resources.FindAsync(id);
@@ -34,6 +37,7 @@ namespace Cleopatra.API.Controllers
         }
 
         [HttpPost]
+        [Authorize(Policy = "ManagerOnly")]
         public async Task<ActionResult<Resource>> AddResource(Resource resource)
         {
             _context.Resources.Add(resource);
@@ -42,6 +46,7 @@ namespace Cleopatra.API.Controllers
         }
 
         [HttpPut("{id}")]
+        [Authorize(Policy = "ManagerOnly")]
         public async Task<IActionResult> UpdateResource(int id, Resource resource)
         {
             if (id != resource.resource_id) return BadRequest();
@@ -51,6 +56,7 @@ namespace Cleopatra.API.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Policy = "ManagerOnly")]
         public async Task<IActionResult> DeleteResource(int id)
         {
             var resource = await _context.Resources.FindAsync(id);

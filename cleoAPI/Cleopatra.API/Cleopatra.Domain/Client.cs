@@ -20,6 +20,8 @@ namespace Cleopatra.Domain
         public string? email { get; set; }
         public string? notes { get; set; }
 
+        public bool is_deleted { get; set; } = false;
+
         // Navigation property
         public ICollection<Notification> Notifications { get; set; }
     

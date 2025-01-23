@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Cleopatra.Infrastructure;
 using Cleopatra.Domain;
+using Microsoft.AspNetCore.Authorization;
 
 
 namespace Cleopatra.API.Controllers
@@ -18,6 +19,7 @@ namespace Cleopatra.API.Controllers
         }
 
         [HttpGet]
+        [Authorize(Policy = "ManagerOnly")]
         public async Task<ActionResult<IEnumerable<Client>>> GetClients()
         {
             var clients = await _context.Clients
@@ -35,6 +37,7 @@ namespace Cleopatra.API.Controllers
         }
 
         [HttpGet("{id}")]
+        [Authorize(Policy = "ManagerOnly")]
         public async Task<ActionResult<Client>> GetClient(int id)
         {
             var client = await _context.Clients.FindAsync(id);
@@ -43,6 +46,7 @@ namespace Cleopatra.API.Controllers
         }
 
         [HttpPost]
+        [Authorize(Policy = "ManagerOnly")]
         public async Task<ActionResult<Client>> AddClient(Client client)
         {
             _context.Clients.Add(client);
@@ -51,6 +55,7 @@ namespace Cleopatra.API.Controllers
         }
 
         [HttpPut("{id}")]
+        [Authorize(Policy = "ManagerOnly")]
         public async Task<IActionResult> UpdateClient(int id, Client client)
         {
             if (id != client.client_id) return BadRequest();
@@ -60,6 +65,7 @@ namespace Cleopatra.API.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Policy = "ManagerOnly")]
         public async Task<IActionResult> DeleteClient(int id)
         {
             var client = await _context.Clients.FindAsync(id);

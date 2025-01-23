@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "8hyLuZ54RPlLw8ryjoFIdhA8Cu5N6jaPWLzeJkn+snKSM2SqHuwqgxgVpSE1nXpTJISiqxM1vhCspbUVeeBtHQ==",
+  "dgSpecHash": "Q8/zR7tLHwwTmsFWYPn6B0obB4vw+Ru1cZh6o8+nJb8M2Ky1R2NTEy8UwXlgeL3dx1FFO4Q6iD4pvnYyyC0QLQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.API\\Cleopatra.API.csproj",
+  "projectFilePath": "C:\\Users\\Radek\\Desktop\\wt15_cleopatra-main\\cleoAPI\\Cleopatra.API\\Cleopatra.API\\Cleopatra.API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Radek\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\Radek\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Radek\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "C:\\Users\\Radek\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.3.3\\microsoft.codeanalysis.analyzers.3.3.3.nupkg.sha512",
@@ -30,6 +31,7 @@
     "C:\\Users\\Radek\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\Radek\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
     "C:\\Users\\Radek\\.nuget\\packages\\mysqlconnector\\2.3.5\\mysqlconnector.2.3.5.nupkg.sha512",
+    "C:\\Users\\Radek\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\Radek\\.nuget\\packages\\pomelo.entityframeworkcore.mysql\\8.0.2\\pomelo.entityframeworkcore.mysql.8.0.2.nupkg.sha512",
     "C:\\Users\\Radek\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
     "C:\\Users\\Radek\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
