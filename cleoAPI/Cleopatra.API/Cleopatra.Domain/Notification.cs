@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace Cleopatra.Domain
 {
@@ -11,9 +12,9 @@ namespace Cleopatra.Domain
         [Required]
         public int client_id { get; set; }
 
-        // Navigation property
         [ForeignKey("client_id")]
-        public Client client { get; set; }
+        [JsonIgnore] // Ignoruj nawigację w serializacji
+        public Client? Client { get; set; }
 
         [Required]
         [MaxLength(10)]

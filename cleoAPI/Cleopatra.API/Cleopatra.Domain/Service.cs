@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace Cleopatra.Domain
 {
@@ -24,6 +25,8 @@ namespace Cleopatra.Domain
         public int category_id { get; set; }
 
         [ForeignKey("category_id")]
-        public ServiceCategory category { get; set; }
+        [JsonIgnore] // Ignoruj w serializacji do/z JSON
+        public ServiceCategory? category { get; set; } // Opcjonalne powiązanie
     }
+
 }

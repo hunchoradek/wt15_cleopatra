@@ -45,6 +45,10 @@ namespace Cleopatra.API.Controllers
         [Authorize(Policy = "ManagerOnly")]
         public async Task<ActionResult<Service>> AddService(Service service)
         {
+            // Usuń kategorię, jeśli jest dołączona do obiektu
+            service.category = null;
+
+            // Dodaj usługę do kontekstu
             _context.Services.Add(service);
             await _context.SaveChangesAsync();
 
@@ -61,6 +65,10 @@ namespace Cleopatra.API.Controllers
                 return BadRequest();
             }
 
+            // Usuń kategorię, jeśli jest dołączona do obiektu
+            updatedService.category = null;
+
+            // Oznacz encję jako zmodyfikowaną
             _context.Entry(updatedService).State = EntityState.Modified;
 
             try
@@ -79,6 +87,7 @@ namespace Cleopatra.API.Controllers
 
             return NoContent();
         }
+
 
         // DELETE: api/services/{id}
         [HttpDelete("{id}")]

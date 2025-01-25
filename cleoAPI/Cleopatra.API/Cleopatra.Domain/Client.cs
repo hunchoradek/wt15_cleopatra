@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace Cleopatra.Domain
 {
@@ -22,8 +23,9 @@ namespace Cleopatra.Domain
 
         public bool is_deleted { get; set; } = false;
 
-        // Navigation property
-        public ICollection<Notification> Notifications { get; set; }
-    
+        // Navigation property (ignored in JSON)
+        [JsonIgnore]
+        public ICollection<Notification>? Notifications { get; set; }
+
     }
 }

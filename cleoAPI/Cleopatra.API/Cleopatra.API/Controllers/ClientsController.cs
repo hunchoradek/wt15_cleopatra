@@ -49,20 +49,66 @@ namespace Cleopatra.API.Controllers
         [Authorize(Policy = "ManagerOnly")]
         public async Task<ActionResult<Client>> AddClient(Client client)
         {
-            _context.Clients.Add(client);
-            await _context.SaveChangesAsync();
-            return CreatedAtAction(nameof(GetClient), new { id = client.client_id }, client);
+            // Sprawdź, czy klient o podanym numerze telefonu lub e-mailu już istnieje
+            var existingClient = await _context.Clients
+                .FirstOrDefaultAsync(c => c.phone_number == client.phone_number || c.email == client.email);
+
+            if (existingClient != null)
+            {
+                return Conflict("Client with the same phone number or email already exists.");
+            }
+
+            // Ignoruj powiązane notyfikacje
+            client.Notifications = null;
+
+            try
+            {
+                _context.Clients.Add(client);
+                await _context.SaveChangesAsync();
+                return CreatedAtAction(nameof(GetClient), new { id = client.client_id }, client);
+            }
+            catch (Exception ex)
+            {
+                // Obsługa nieprzewidzianych błędów
+                return StatusCode(500, $"An error occurred while adding the client: {ex.Message}");
+            }
         }
 
         [HttpPut("{id}")]
         [Authorize(Policy = "ManagerOnly")]
         public async Task<IActionResult> UpdateClient(int id, Client client)
         {
-            if (id != client.client_id) return BadRequest();
-            _context.Entry(client).State = EntityState.Modified;
-            await _context.SaveChangesAsync();
-            return NoContent();
+            if (id != client.client_id)
+            {
+                return BadRequest("Client ID in the URL does not match the body.");
+            }
+
+            var existingClient = await _context.Clients.FindAsync(id);
+            if (existingClient == null)
+            {
+                return NotFound("Client not found.");
+            }
+
+            // Aktualizuj istniejącego klienta
+            existingClient.name = client.name;
+            existingClient.phone_number = client.phone_number;
+            existingClient.email = client.email;
+            existingClient.notes = client.notes;
+            existingClient.is_deleted = client.is_deleted;
+
+            try
+            {
+                await _context.SaveChangesAsync();
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                // Obsługa nieprzewidzianych błędów
+                return StatusCode(500, $"An error occurred while updating the client: {ex.Message}");
+            }
         }
+
+
 
         [HttpDelete("{id}")]
         [Authorize(Policy = "ManagerOnly")]

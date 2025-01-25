@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Cleopatra.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4f3efebe95efc22cc01faca4e8f9d8985838b988")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+96875af180c3f394e336324feca82ad25b893822")]
 [assembly: System.Reflection.AssemblyProductAttribute("Cleopatra.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Cleopatra.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
