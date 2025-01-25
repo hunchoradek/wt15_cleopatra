@@ -10,16 +10,20 @@ using QuestPDF.Helpers;
 using QuestPDF.Infrastructure;
 using System;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.Extensions.Logging;
 
 [ApiController]
 [Route("api/reports")]
 public class ReportsController : ControllerBase
 {
     private readonly SalonContext _context;
+    private readonly ILogger<ReportsController> _logger;
 
-    public ReportsController(SalonContext context)
+
+    public ReportsController(SalonContext context, ILogger<ReportsController> logger)
     {
         _context = context;
+        _logger = logger;
     }
 
     // GET: /api/reports/bookings
@@ -232,13 +236,15 @@ public class ReportsController : ControllerBase
 
     // GET: /api/reports/resources
     [HttpGet("resources")]
-    [Authorize(Policy = "ManagerOnly")]
     public async Task<IActionResult> GenerateResourceReport()
     {
+        _logger.LogInformation("Starting GenerateResourceReport method.");
+
         var resources = await _context.Resources.ToListAsync();
 
         if (!resources.Any())
         {
+            _logger.LogWarning("No resources found.");
             return NotFound("No resources found.");
         }
 
@@ -246,10 +252,12 @@ public class ReportsController : ControllerBase
         QuestPDF.Settings.License = LicenseType.Community;
 
         // Create a memory stream
-        var stream = new MemoryStream();
+        using var stream = new MemoryStream();
 
         try
         {
+            _logger.LogInformation("Generating PDF document.");
+
             // Generate the PDF using QuestPDF
             var document = Document.Create(container =>
             {
@@ -312,25 +320,51 @@ public class ReportsController : ControllerBase
             // Set the stream position to the beginning before returning
             stream.Position = 0;
 
+            _logger.LogInformation("Saving report record to the database.");
+
             // Save the report record in the database
             var report = new Report
             {
                 type = "Resource",
                 created_at = DateTime.UtcNow
             };
+
             _context.Reports.Add(report);
             await _context.SaveChangesAsync();
 
+            // Log before returning the file
+            _logger.LogInformation("Returning the generated PDF file.");
+
             // Return the stream as a PDF file
-            return File(stream, "application/pdf", "ResourceReport.pdf");
+            return File(stream.ToArray(), "application/pdf", "ResourceReport.pdf");
+        }
+        catch (DbUpdateException dbEx)
+        {
+            // Log database update exceptions
+            _logger.LogError(dbEx, "An error occurred while saving the report to the database.");
+            return StatusCode(500, $"An error occurred while saving the report to the database: {dbEx.Message}");
         }
         catch (Exception ex)
         {
-            // In case of an error, close the stream and return an error code
-            stream.Dispose();
+            // Log other exceptions
+            _logger.LogError(ex, "An error occurred while generating the report.");
             return StatusCode(500, $"An error occurred while generating the report: {ex.Message}");
         }
+        finally
+        {
+            // Ensure the stream is disposed
+            stream.Dispose();
+            _logger.LogInformation("Memory stream disposed.");
+        }
     }
+
+
+
+
+
+
+
+
     [HttpGet("all")]
     [Authorize(Policy = "ManagerOnly")]
     public async Task<IActionResult> GetAllReports()

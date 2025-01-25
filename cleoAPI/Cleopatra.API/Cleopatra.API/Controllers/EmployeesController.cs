@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Salon.Domain;
+using Cleopatra.API.Services;
 
 namespace Cleopatra.API.Controllers
 {
@@ -194,26 +195,49 @@ namespace Cleopatra.API.Controllers
         // POST: api/employees/{id}/vacations
         [HttpPost("{id}/vacations")]
         [Authorize(Policy = "ManagerOnly")]
-        public async Task<IActionResult> AddVacation(int id, Vacation vacation)
+        public async Task<IActionResult> AddVacation(int id, [FromBody] VacationRequest request)
         {
-            vacation.employee_id = id;
+            // Sprawdź, czy pracownik istnieje
+            var employee = await _context.Employees.FindAsync(id);
+            if (employee == null)
+            {
+                return NotFound(new { Message = "Pracownik nie został znaleziony." });
+            }
+
+            // Utwórz nowy wpis urlopu
+            var vacation = new Vacation
+            {
+                employee_id = id,
+                start_date = request.StartDate,
+                end_date = request.EndDate
+            };
             _context.Vacations.Add(vacation);
 
-            // Anulowanie rezerwacji w czasie urlopu
+            // Anulowanie rezerwacji w okresie urlopu
             var appointments = _context.Appointments
                 .Where(a => a.employee_id == id &&
-                            a.appointment_date >= vacation.start_date &&
-                            a.appointment_date <= vacation.end_date);
+                            a.appointment_date >= request.StartDate &&
+                            a.appointment_date <= request.EndDate);
 
             foreach (var appointment in appointments)
             {
                 appointment.status = "cancelled";
-                // TODO: Wyślij powiadomienie e-mail do klienta
+
+                //var client = await _context.Clients.FindAsync(appointment.client_id);
+                //if (client != null && !string.IsNullOrEmpty(client.email))
+                //{
+                    //await _notificationService.SendEmailAsync(
+                        //client.email,
+                        //"Anulowanie rezerwacji",
+                        //$"Twoje spotkanie zaplanowane na {appointment.appointment_date:yyyy-MM-dd} zostało anulowane z powodu urlopu pracownika."
+                    //);
+                //}
             }
 
             await _context.SaveChangesAsync();
             return NoContent();
         }
+
 
         // GET: api/employees/available-times
         [HttpGet("available-times")]

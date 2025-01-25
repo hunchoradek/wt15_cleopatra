@@ -1,74 +1,142 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Cleopatra.Infrastructure;
-using Cleopatra.Domain;
-using System.Collections.Generic;
+using System;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
+using Cleopatra.API.Services;
 
-namespace Cleopatra.API.Controllers
+[ApiController]
+[Route("api/notifications")]
+public class NotificationsController : ControllerBase
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class NotificationsController : ControllerBase
+    private readonly SalonContext _context;
+    private readonly NotificationService _notificationService;
+
+    public NotificationsController(SalonContext context, NotificationService notificationService)
     {
-        private readonly SalonContext _context;
+        _context = context;
+        _notificationService = notificationService;
+    }
 
-        public NotificationsController(SalonContext context)
+    /// <summary>
+    /// Wysyłanie przypomnienia o konkretnym spotkaniu.
+    /// </summary>
+    /// <param name="appointmentId">ID spotkania.</param>
+    /// <returns>HTTP 200, jeśli wysłano przypomnienie.</returns>
+    [HttpPost("send-reminder/{appointmentId}")]
+    [Authorize(Policy = "ManagerOnly")]
+    public async Task<IActionResult> SendReminder(int appointmentId)
+    {
+        var appointment = await _context.Appointments
+            .Include(a => a.Client)
+            .FirstOrDefaultAsync(a => a.appointment_id == appointmentId);
+
+        if (appointment == null)
         {
-            _context = context;
+            return NotFound("Appointment not found.");
         }
 
-        [HttpGet]
-        [Authorize(Policy = "ManagerOnly")]
-        public async Task<ActionResult<IEnumerable<Notification>>> GetNotifications()
+        if (appointment.Client == null)
         {
-            var notifications = await _context.Notifications
-                .Include(n => n.client) // Include related Client data
-                .ToListAsync();
-            return Ok(notifications);
+            return BadRequest("Client information is missing for this appointment.");
         }
 
-        [HttpGet("{id}")]
-        [Authorize(Policy = "ManagerOnly")]
-        public async Task<ActionResult<Notification>> GetNotification(int id)
-        {
-            var notification = await _context.Notifications
-                .Include(n => n.client) // Include related Client data
-                .FirstOrDefaultAsync(n => n.notification_id == id);
+        var client = appointment.Client;
+        var subject = "Appointment Reminder";
+        var body = $@"
+            <p>Dear {client.name},</p>
+            <p>This is a reminder for your upcoming appointment.</p>
+            <p><b>Details:</b></p>
+            <ul>
+                <li><b>Service:</b> {appointment.service}</li>
+                <li><b>Date:</b> {appointment.appointment_date:yyyy-MM-dd}</li>
+                <li><b>Time:</b> {appointment.start_time} - {appointment.end_time}</li>
+            </ul>
+            <p>We look forward to seeing you!</p>";
 
-            if (notification == null) return NotFound();
-            return notification;
+        await _notificationService.SendEmailAsync(client.email, subject, body);
+
+        return Ok("Reminder sent successfully.");
+    }
+
+    /// <summary>
+    /// Wysyłanie automatycznych przypomnień dla wszystkich klientów.
+    /// </summary>
+    /// <returns>HTTP 200, jeśli wysłano przypomnienia.</returns>
+    [HttpPost("send-daily-reminders")]
+    [Authorize(Policy = "ManagerOnly")]
+    public async Task<IActionResult> SendDailyReminders()
+    {
+        var tomorrow = DateTime.Now.Date.AddDays(1);
+
+        var appointments = await _context.Appointments
+            .Include(a => a.Client)
+            .Where(a => a.appointment_date == tomorrow && a.status == "scheduled")
+            .ToListAsync();
+
+        foreach (var appointment in appointments)
+        {
+            if (appointment.Client == null)
+                continue;
+
+            var client = appointment.Client;
+            var subject = "Appointment Reminder";
+            var body = $@"
+                <p>Dear {client.name},</p>
+                <p>This is a reminder for your appointment scheduled tomorrow.</p>
+                <p><b>Details:</b></p>
+                <ul>
+                    <li><b>Service:</b> {appointment.service}</li>
+                    <li><b>Date:</b> {appointment.appointment_date:yyyy-MM-dd}</li>
+                    <li><b>Time:</b> {appointment.start_time} - {appointment.end_time}</li>
+                </ul>
+                <p>We look forward to seeing you!</p>";
+
+            await _notificationService.SendEmailAsync(client.email, subject, body);
         }
 
-        [HttpPost]
-        [Authorize(Policy = "ManagerOnly")]
-        public async Task<ActionResult<Notification>> AddNotification(Notification notification)
+        return Ok("Daily reminders sent successfully.");
+    }
+
+    /// <summary>
+    /// Powiadomienie o anulowaniu spotkania.
+    /// </summary>
+    /// <param name="appointmentId">ID spotkania.</param>
+    /// <returns>HTTP 200, jeśli powiadomienie wysłano.</returns>
+    [HttpPost("send-cancellation/{appointmentId}")]
+    [Authorize(Policy = "ManagerOnly")]
+    public async Task<IActionResult> SendCancellationNotification(int appointmentId)
+    {
+        var appointment = await _context.Appointments
+            .Include(a => a.Client)
+            .FirstOrDefaultAsync(a => a.appointment_id == appointmentId);
+
+        if (appointment == null)
         {
-            _context.Notifications.Add(notification);
-            await _context.SaveChangesAsync();
-            return CreatedAtAction(nameof(GetNotification), new { id = notification.notification_id }, notification);
+            return NotFound("Appointment not found.");
         }
 
-        [HttpPut("{id}")]
-        [Authorize(Policy = "ManagerOnly")]
-        public async Task<IActionResult> UpdateNotification(int id, Notification notification)
+        if (appointment.Client == null)
         {
-            if (id != notification.notification_id) return BadRequest();
-            _context.Entry(notification).State = EntityState.Modified;
-            await _context.SaveChangesAsync();
-            return NoContent();
+            return BadRequest("Client information is missing for this appointment.");
         }
 
-        [HttpDelete("{id}")]
-        [Authorize(Policy = "ManagerOnly")]
-        public async Task<IActionResult> DeleteNotification(int id)
-        {
-            var notification = await _context.Notifications.FindAsync(id);
-            if (notification == null) return NotFound();
-            _context.Notifications.Remove(notification);
-            await _context.SaveChangesAsync();
-            return NoContent();
-        }
+        var client = appointment.Client;
+        var subject = "Appointment Cancellation";
+        var body = $@"
+            <p>Dear {client.name},</p>
+            <p>We regret to inform you that your appointment has been cancelled.</p>
+            <p><b>Details:</b></p>
+            <ul>
+                <li><b>Service:</b> {appointment.service}</li>
+                <li><b>Date:</b> {appointment.appointment_date:yyyy-MM-dd}</li>
+                <li><b>Time:</b> {appointment.start_time} - {appointment.end_time}</li>
+            </ul>
+            <p>Please contact us to reschedule if needed.</p>";
+
+        await _notificationService.SendEmailAsync(client.email, subject, body);
+
+        return Ok("Cancellation notification sent successfully.");
     }
 }

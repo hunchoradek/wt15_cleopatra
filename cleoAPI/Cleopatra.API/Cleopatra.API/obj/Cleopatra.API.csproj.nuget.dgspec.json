@@ -57,15 +57,31 @@
               "target": "Package",
               "version": "[4.0.3, )"
             },
+            "Hangfire.AspNetCore": {
+              "target": "Package",
+              "version": "[1.8.17, )"
+            },
+            "Hangfire.MySql": {
+              "target": "Package",
+              "version": "[0.0.7, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.10, )"
             },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[9.2.0, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[8.0.2, )"
             },
             "Portable.BouncyCastle": {
               "target": "Package",
@@ -79,6 +95,10 @@
               "target": "Package",
               "version": "[6.4.0, )"
             },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[9.0.1, )"
+            },
             "itext": {
               "target": "Package",
               "version": "[8.0.5, )"
@@ -90,6 +110,14 @@
             "itext7": {
               "target": "Package",
               "version": "[8.0.5, )"
+            },
+            "linq2db": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "linq2db.MySql": {
+              "target": "Package",
+              "version": "[4.1.0, )"
             }
           },
           "imports": [

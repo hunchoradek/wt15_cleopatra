@@ -53,23 +53,40 @@ namespace Cleopatra.API.Controllers
         [Authorize(Policy = "ManagerOnly")]
         public async Task<ActionResult<Appointment>> AddAppointment(Appointment appointment)
         {
-            // Walidacja dostępności pracownika
-            var isAvailable = !_context.Appointments.Any(a =>
-                a.employee_id == appointment.employee_id &&
-                a.appointment_date == appointment.appointment_date &&
-                a.start_time < appointment.end_time &&
-                a.end_time > appointment.start_time);
+            // Walidacja dostępności pracownika w podanym przedziale czasowym
+            var conflictingAppointment = _context.Appointments
+                .FirstOrDefault(a =>
+                    a.employee_id == appointment.employee_id &&
+                    a.appointment_date == appointment.appointment_date &&
+                    (
+                        (appointment.start_time >= a.start_time && appointment.start_time < a.end_time) || // Kolizja na początku
+                        (appointment.end_time > a.start_time && appointment.end_time <= a.end_time) ||   // Kolizja na końcu
+                        (appointment.start_time <= a.start_time && appointment.end_time >= a.end_time)   // Pełne pokrycie
+                    )
+                );
 
-            if (!isAvailable)
+            if (conflictingAppointment != null)
             {
-                return BadRequest("Pracownik nie jest dostępny w tym terminie.");
+                return BadRequest(new
+                {
+                    Message = "Pracownik nie jest dostępny w tym terminie.",
+                    ConflictingAppointment = new
+                    {
+                        conflictingAppointment.appointment_id,
+                        conflictingAppointment.start_time,
+                        conflictingAppointment.end_time,
+                        conflictingAppointment.appointment_date
+                    }
+                });
             }
 
+            // Dodajemy nowe spotkanie
             _context.Appointments.Add(appointment);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction(nameof(GetAppointment), new { id = appointment.appointment_id }, appointment);
         }
+
 
         // PUT: api/appointments/{id}
         [HttpPut("{id}")]
