@@ -50,10 +50,10 @@ namespace Cleopatra.API.Controllers
         [HttpGet("employees/{categoryId}")]
         public async Task<IActionResult> GetEmployeesByCategory(int categoryId)
         {
-            var categoryString = $"\"{categoryId}\""; // Konwersja na format JSON string
+            var categoryString = $"\"{categoryId}\"";
 
             var employees = await _context.Employees
-                .Where(e => e.specialties.Contains(categoryString)) // Sprawdza, czy specialties zawiera ID kategorii
+                .Where(e => e.specialties.Contains(categoryString) && e.isDeleted == false)
                 .Select(e => new { e.employee_id, e.name, e.phone_number })
                 .ToListAsync();
 
@@ -66,13 +66,13 @@ namespace Cleopatra.API.Controllers
         }
 
 
+
         // GET: /api/public/available-times
         [HttpGet("available-times")]
         public async Task<IActionResult> GetAvailableTimes([FromQuery] DateTime date, [FromQuery] int? employeeId = null, [FromQuery] int? categoryId = null)
         {
             if (employeeId.HasValue)
             {
-                // Fetch available times for a specific employee
                 var employee = await _context.Employees.FindAsync(employeeId.Value);
                 if (employee == null)
                 {
@@ -90,7 +90,6 @@ namespace Cleopatra.API.Controllers
             }
             else if (categoryId.HasValue)
             {
-                // Fetch available times for all employees in the specified category
                 var employees = await _context.Employees
                     .Where(e => !e.isDeleted && e.role == "worker")
                     .ToListAsync();
@@ -126,13 +125,11 @@ namespace Cleopatra.API.Controllers
         [HttpPost("appointments")]
         public async Task<IActionResult> BookAppointment([FromBody] AppointmentRequest request)
         {
-            // Sprawdzenie, czy numer telefonu jest podany
             if (string.IsNullOrWhiteSpace(request.ClientPhoneNumber))
             {
                 return BadRequest("Client phone number is required.");
             }
 
-            // Sprawdzenie, czy klient z takim numerem telefonu już istnieje
             var client = await _context.Clients
                 .FirstOrDefaultAsync(c => c.phone_number == request.ClientPhoneNumber);
 
@@ -140,12 +137,10 @@ namespace Cleopatra.API.Controllers
 
             if (client != null)
             {
-                // Klient istnieje
                 clientId = client.client_id;
             }
             else
             {
-                // Tworzenie nowego klienta
                 var newClient = new Client
                 {
                     name = request.ClientName,
@@ -161,7 +156,6 @@ namespace Cleopatra.API.Controllers
                 clientId = newClient.client_id;
             }
 
-            // Pobranie pracownika i usługi
             var employee = await _context.Employees.FindAsync(request.EmployeeId);
             var service = await _context.Services.FindAsync(request.ServiceId);
 
@@ -170,7 +164,6 @@ namespace Cleopatra.API.Controllers
                 return BadRequest("Invalid employee or service.");
             }
 
-            // Sprawdzenie dostępności terminu
             var existingAppointment = await _context.Appointments
                 .AnyAsync(a => a.employee_id == request.EmployeeId &&
                                a.appointment_date == request.AppointmentDate &&
@@ -181,7 +174,6 @@ namespace Cleopatra.API.Controllers
                 return Conflict("The selected time slot is already booked.");
             }
 
-            // Tworzenie nowej rezerwacji
             var appointment = new Appointment
             {
                 client_id = clientId,
