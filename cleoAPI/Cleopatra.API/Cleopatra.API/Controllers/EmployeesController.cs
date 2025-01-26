@@ -149,19 +149,27 @@ namespace Cleopatra.API.Controllers
         // PUT: api/employees/{id}/change-password
         [HttpPut("{id}/change-password")]
         [Authorize(Policy = "ManagerOnly")]
-        public async Task<IActionResult> ChangePassword(int id, [FromBody] string newPassword)
+        public async Task<IActionResult> ChangePassword(int id, [FromBody] UpdatePasswordRequest request)
         {
+            // Sprawdzenie, czy request zawiera dane
+            if (request == null || string.IsNullOrWhiteSpace(request.password))
+            {
+                return BadRequest("Password is required.");
+            }
+
             var employee = await _context.Employees.FirstOrDefaultAsync(e => e.employee_id == id);
             if (employee == null)
             {
-                return NotFound();
+                return NotFound("Employee not found.");
             }
 
-            employee.password_hash = BCrypt.Net.BCrypt.HashPassword(newPassword);
+            // Hashowanie nowego hasła
+            employee.password_hash = BCrypt.Net.BCrypt.HashPassword(request.password);
             await _context.SaveChangesAsync();
 
             return NoContent();
         }
+
 
         // DELETE: api/employees/{id}
         [HttpDelete("{id}")]
@@ -297,7 +305,7 @@ namespace Cleopatra.API.Controllers
         // GET: api/employees/me/schedule
         [HttpGet("me/schedule")]
         [Authorize]
-        public async Task<ActionResult<IEnumerable<object>>> GetMySchedule(DateTime date)
+        public async Task<ActionResult<IEnumerable<object>>> GetMySchedule()
         {
             // Pobranie employee_id z ClaimsPrincipal
             var employeeIdClaim = User.Claims.FirstOrDefault(c => c.Type == "employee_id");
@@ -318,63 +326,75 @@ namespace Cleopatra.API.Controllers
                 return NotFound("Employee not found.");
             }
 
-            // Pobranie harmonogramu dla zalogowanego pracownika w danym dniu
+            // Pobranie wszystkich spotkań dla zalogowanego pracownika
             var schedule = _context.Appointments
-                .Where(a => a.employee_id == employeeId && a.appointment_date == date.Date)
+                .Where(a => a.employee_id == employeeId)
                 .Select(a => new
                 {
                     a.appointment_id,
                     a.service,
                     a.start_time,
                     a.end_time,
-                    a.status
+                    a.status,
+                    a.appointment_date
                 });
 
             return Ok(await schedule.ToListAsync());
         }
 
 
+
         // Pomocnicza funkcja do obliczania dostępnych godzin pracy
         private List<string> CalculateAvailableHours(string workingHoursJson, DateTime date, int employeeId)
         {
-            // 1. Parsowanie JSON-a harmonogramu pracy
-            var workingHours = JsonConvert.DeserializeObject<Dictionary<string, List<string>>>(workingHoursJson);
+            // 1. Sprawdź, czy pracownik ma urlop w danym dniu
+            var hasVacation = _context.Vacations
+                .Any(v => v.employee_id == employeeId && date >= v.start_date && date <= v.end_date);
 
-            // Pobranie odpowiedniego dnia tygodnia (np. "mon", "tue")
-            string dayKey = date.DayOfWeek.ToString().ToLower().Substring(0, 3);
-            if (!workingHours.ContainsKey(dayKey))
+            if (hasVacation)
             {
-                // Jeśli brak godzin pracy w danym dniu, pracownik nie pracuje
+                // Jeśli pracownik ma urlop, nie ma dostępnych godzin
                 return new List<string>();
             }
 
-            // Lista przedziałów czasowych w formacie "09:00-17:00"
+            // 2. Parse the working hours JSON
+            var workingHours = JsonConvert.DeserializeObject<Dictionary<string, List<string>>>(workingHoursJson);
+
+            // Get the appropriate day of the week (e.g., "mon", "tue")
+            string dayKey = date.DayOfWeek.ToString().ToLower().Substring(0, 3);
+            if (!workingHours.ContainsKey(dayKey))
+            {
+                // If no working hours for the day, the employee is not working
+                return new List<string>();
+            }
+
+            // List of time intervals in the format "09:00-17:00"
             var workIntervals = workingHours[dayKey];
 
-            // 2. Pobranie rezerwacji dla pracownika w danym dniu (jednorazowo!)
+            // 3. Fetch appointments for the employee on the given day (once!)
             var appointments = _context.Appointments
                 .Where(a => a.employee_id == employeeId && a.appointment_date == date)
-                .Select(a => new { a.start_time, a.end_time }) // Tylko potrzebne kolumny
-                .ToList(); // Pobieramy dane z bazy, aby nie trzymać otwartego połączenia
+                .Select(a => new { a.start_time, a.end_time }) // Only needed columns
+                .ToList(); // Fetch data from the database to avoid keeping the connection open
 
-            // 3. Obliczanie dostępnych godzin
+            // 4. Calculate available hours
             var availableHours = new List<string>();
 
             foreach (var interval in workIntervals)
             {
-                // Parsowanie godzin pracy (np. "09:00-17:00" → TimeSpan)
+                // Parse working hours (e.g., "09:00-17:00" → TimeSpan)
                 var times = interval.Split('-');
                 var start = TimeSpan.Parse(times[0]);
                 var end = TimeSpan.Parse(times[1]);
 
-                // Rozpocznij od początku przedziału i sprawdzaj dostępność
+                // Start from the beginning of the interval and check availability
                 var currentTime = start;
                 while (currentTime < end)
                 {
-                    var nextTime = currentTime.Add(TimeSpan.FromMinutes(30)); // Krok co 30 minut
+                    var nextTime = currentTime.Add(TimeSpan.FromMinutes(30)); // 30-minute step
                     if (nextTime > end) break;
 
-                    // Sprawdź, czy czas jest wolny
+                    // Check if the time is free
                     bool isOccupied = appointments.Any(a =>
                         a.start_time < nextTime && a.end_time > currentTime);
 
@@ -383,7 +403,7 @@ namespace Cleopatra.API.Controllers
                         availableHours.Add($"{currentTime:hh\\:mm}-{nextTime:hh\\:mm}");
                     }
 
-                    currentTime = nextTime; // Przejdź do kolejnego przedziału
+                    currentTime = nextTime; // Move to the next interval
                 }
             }
 

@@ -203,7 +203,17 @@ namespace Cleopatra.API.Controllers
 
         private List<string> CalculateAvailableHours(string workingHoursJson, DateTime date, int employeeId)
         {
-            // 1. Parse the working hours JSON
+            // 1. Sprawdź, czy pracownik ma urlop w danym dniu
+            var hasVacation = _context.Vacations
+                .Any(v => v.employee_id == employeeId && date >= v.start_date && date <= v.end_date);
+
+            if (hasVacation)
+            {
+                // Jeśli pracownik ma urlop, nie ma dostępnych godzin
+                return new List<string>();
+            }
+
+            // 2. Parse the working hours JSON
             var workingHours = JsonConvert.DeserializeObject<Dictionary<string, List<string>>>(workingHoursJson);
 
             // Get the appropriate day of the week (e.g., "mon", "tue")
@@ -217,13 +227,13 @@ namespace Cleopatra.API.Controllers
             // List of time intervals in the format "09:00-17:00"
             var workIntervals = workingHours[dayKey];
 
-            // 2. Fetch appointments for the employee on the given day (once!)
+            // 3. Fetch appointments for the employee on the given day (once!)
             var appointments = _context.Appointments
                 .Where(a => a.employee_id == employeeId && a.appointment_date == date)
                 .Select(a => new { a.start_time, a.end_time }) // Only needed columns
                 .ToList(); // Fetch data from the database to avoid keeping the connection open
 
-            // 3. Calculate available hours
+            // 4. Calculate available hours
             var availableHours = new List<string>();
 
             foreach (var interval in workIntervals)
@@ -255,7 +265,6 @@ namespace Cleopatra.API.Controllers
 
             return availableHours;
         }
-
     }
 
 

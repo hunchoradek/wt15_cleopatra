@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Cleopatra.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+96875af180c3f394e336324feca82ad25b893822")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+25380c31fe59cc52890049cc62b018f01ca2a2a4")]
 [assembly: System.Reflection.AssemblyProductAttribute("Cleopatra.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Cleopatra.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
