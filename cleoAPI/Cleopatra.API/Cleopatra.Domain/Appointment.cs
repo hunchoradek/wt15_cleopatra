@@ -30,6 +30,8 @@ namespace Cleopatra.Domain
         [Required]
         public DateTime appointment_date { get; set; } // Dodaj to pole
 
+        public bool ReminderSent { get; set; } // New property
+
         [Required]
         public TimeSpan start_time { get; set; }
 

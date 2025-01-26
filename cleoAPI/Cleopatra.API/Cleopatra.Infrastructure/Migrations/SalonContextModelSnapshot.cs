@@ -24,44 +24,50 @@ namespace Cleopatra.Infrastructure.Migrations
 
             modelBuilder.Entity("Cleopatra.Domain.Appointment", b =>
                 {
-                    b.Property<int>("AppointmentId")
+                    b.Property<int>("appointment_id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("AppointmentId"));
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("appointment_id"));
 
-                    b.Property<DateTime>("AppointmentDate")
+                    b.Property<bool>("ReminderSent")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<DateTime>("appointment_date")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<int>("ClientId")
+                    b.Property<int>("client_id")
                         .HasColumnType("int");
 
-                    b.Property<int>("EmployeeId")
+                    b.Property<int>("employee_id")
                         .HasColumnType("int");
 
-                    b.Property<TimeSpan>("EndTime")
+                    b.Property<string>("employee_name")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<TimeSpan>("end_time")
                         .HasColumnType("time(6)");
 
-                    b.Property<string>("Notes")
+                    b.Property<string>("notes")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("service")
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<string>("Service")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<TimeSpan>("StartTime")
+                    b.Property<TimeSpan>("start_time")
                         .HasColumnType("time(6)");
 
-                    b.Property<string>("Status")
+                    b.Property<string>("status")
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.HasKey("AppointmentId");
+                    b.HasKey("appointment_id");
 
-                    b.HasIndex("ClientId");
+                    b.HasIndex("client_id");
 
-                    b.HasIndex("EmployeeId");
+                    b.HasIndex("employee_id");
 
                     b.ToTable("Appointments");
                 });
@@ -77,6 +83,9 @@ namespace Cleopatra.Infrastructure.Migrations
                     b.Property<string>("email")
                         .HasMaxLength(100)
                         .HasColumnType("varchar(100)");
+
+                    b.Property<bool>("is_deleted")
+                        .HasColumnType("tinyint(1)");
 
                     b.Property<string>("name")
                         .IsRequired()
@@ -125,6 +134,26 @@ namespace Cleopatra.Infrastructure.Migrations
                     b.ToTable("Notifications");
                 });
 
+            modelBuilder.Entity("Cleopatra.Domain.Report", b =>
+                {
+                    b.Property<int>("report_id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("report_id"));
+
+                    b.Property<DateTime>("created_at")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("type")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("report_id");
+
+                    b.ToTable("Reports");
+                });
+
             modelBuilder.Entity("Cleopatra.Domain.Resource", b =>
                 {
                     b.Property<int>("resource_id")
@@ -162,6 +191,9 @@ namespace Cleopatra.Infrastructure.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("service_id"));
 
+                    b.Property<int>("category_id")
+                        .HasColumnType("int");
+
                     b.Property<string>("description")
                         .IsRequired()
                         .HasColumnType("longtext");
@@ -179,76 +211,121 @@ namespace Cleopatra.Infrastructure.Migrations
 
                     b.HasKey("service_id");
 
+                    b.HasIndex("category_id");
+
                     b.ToTable("Services");
+                });
+
+            modelBuilder.Entity("Cleopatra.Domain.ServiceCategory", b =>
+                {
+                    b.Property<int>("category_id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("category_id"));
+
+                    b.Property<string>("name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)");
+
+                    b.HasKey("category_id");
+
+                    b.ToTable("ServiceCategories");
                 });
 
             modelBuilder.Entity("Cleopatra.Domain.Vacation", b =>
                 {
-                    b.Property<int>("VacationId")
+                    b.Property<int>("vacation_id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("VacationId"));
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("vacation_id"));
 
-                    b.Property<int>("EmployeeId")
+                    b.Property<int>("employee_id")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("EndDate")
+                    b.Property<DateTime>("end_date")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<DateTime>("StartDate")
+                    b.Property<DateTime>("start_date")
                         .HasColumnType("datetime(6)");
 
-                    b.HasKey("VacationId");
+                    b.HasKey("vacation_id");
 
-                    b.HasIndex("EmployeeId");
+                    b.HasIndex("employee_id");
 
                     b.ToTable("Vacations");
                 });
 
-            modelBuilder.Entity("Salon.Domain.Employee", b =>
+            modelBuilder.Entity("Salon.Domain.Business", b =>
                 {
-                    b.Property<int>("EmployeeId")
+                    b.Property<int>("business_id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("EmployeeId"));
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("business_id"));
 
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("varchar(100)");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("tinyint(1)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("varchar(100)");
-
-                    b.Property<string>("PasswordHash")
+                    b.Property<string>("name")
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<string>("PhoneNumber")
+                    b.Property<string>("opening_hours")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("business_id");
+
+                    b.ToTable("Business");
+                });
+
+            modelBuilder.Entity("Salon.Domain.Employee", b =>
+                {
+                    b.Property<int>("employee_id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("employee_id"));
+
+                    b.Property<string>("email")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)");
+
+                    b.Property<bool>("isDeleted")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<string>("name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)");
+
+                    b.Property<string>("password_hash")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("phone_number")
                         .IsRequired()
                         .HasMaxLength(15)
                         .HasColumnType("varchar(15)");
 
-                    b.Property<string>("Role")
+                    b.Property<string>("role")
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<string>("Specialties")
+                    b.Property<string>("specialties")
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<string>("WorkingHours")
+                    b.Property<string>("username")
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.HasKey("EmployeeId");
+                    b.Property<string>("working_hours")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("employee_id");
 
                     b.ToTable("Employees");
                 });
@@ -257,13 +334,13 @@ namespace Cleopatra.Infrastructure.Migrations
                 {
                     b.HasOne("Cleopatra.Domain.Client", "Client")
                         .WithMany()
-                        .HasForeignKey("ClientId")
+                        .HasForeignKey("client_id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Salon.Domain.Employee", "Employee")
                         .WithMany()
-                        .HasForeignKey("EmployeeId")
+                        .HasForeignKey("employee_id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -274,20 +351,31 @@ namespace Cleopatra.Infrastructure.Migrations
 
             modelBuilder.Entity("Cleopatra.Domain.Notification", b =>
                 {
-                    b.HasOne("Cleopatra.Domain.Client", "client")
+                    b.HasOne("Cleopatra.Domain.Client", "Client")
                         .WithMany("Notifications")
                         .HasForeignKey("client_id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("client");
+                    b.Navigation("Client");
+                });
+
+            modelBuilder.Entity("Cleopatra.Domain.Service", b =>
+                {
+                    b.HasOne("Cleopatra.Domain.ServiceCategory", "category")
+                        .WithMany()
+                        .HasForeignKey("category_id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("category");
                 });
 
             modelBuilder.Entity("Cleopatra.Domain.Vacation", b =>
                 {
                     b.HasOne("Salon.Domain.Employee", "Employee")
                         .WithMany()
-                        .HasForeignKey("EmployeeId")
+                        .HasForeignKey("employee_id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

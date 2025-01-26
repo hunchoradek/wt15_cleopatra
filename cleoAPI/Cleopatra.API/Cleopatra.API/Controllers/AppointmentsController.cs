@@ -14,10 +14,12 @@ namespace Cleopatra.API.Controllers
     public class AppointmentsController : ControllerBase
     {
         private readonly SalonContext _context;
+        private readonly EmailService _emailService;
 
-        public AppointmentsController(SalonContext context)
+        public AppointmentsController(SalonContext context, EmailService emailService)
         {
             _context = context;
+            _emailService = emailService;
         }
 
         // GET: api/appointments
@@ -134,15 +136,29 @@ namespace Cleopatra.API.Controllers
         [Authorize(Policy = "ManagerOnly")]
         public async Task<IActionResult> DeleteAppointment(int id)
         {
-            var appointment = await _context.Appointments.FindAsync(id);
+            var appointment = await _context.Appointments
+                .Include(a => a.Client) // Include the Client entity
+                .FirstOrDefaultAsync(a => a.appointment_id == id);
 
             if (appointment == null) return NotFound();
+
+            // Extract client email from the database
+            var client = appointment.Client;
+            if (client != null)
+            {
+                var clientEmail = client.email; // Assuming the Client entity has an email property
+                var subject = "Salon Cleopatra - Spotkanie anulowane";
+                var body = $"Szanowny/a {client.name},\n\nTwoje spotkanie zaplanowane na {appointment.appointment_date} zostało anulowane.\n\nPrzepraszamy za niedogodności.\n\nZ wyrazami szacunku,\nSalon Cleopatra";
+
+                await _emailService.SendEmailAsync(clientEmail, subject, body);
+            }
 
             _context.Appointments.Remove(appointment);
             await _context.SaveChangesAsync();
 
             return NoContent();
         }
+
 
         // Helper: Sprawdzanie, czy rezerwacja istnieje
         private bool AppointmentExists(int id)

@@ -9,10 +9,12 @@ using Cleopatra.Domain;
 public class VacationsController : ControllerBase
 {
     private readonly SalonContext _context;
+    private readonly EmailService _emailService;
 
-    public VacationsController(SalonContext context)
+    public VacationsController(SalonContext context, EmailService emailService)
     {
         _context = context;
+        _emailService = emailService;
     }
 
     // GET: api/vacations
@@ -79,7 +81,17 @@ public class VacationsController : ControllerBase
         foreach (var appointment in appointments)
         {
             appointment.status = "cancelled";
-            // Możesz dodać wysyłanie powiadomień e-mail do klientów
+
+            // Extract client email from the database
+            var client = await _context.Clients.FirstOrDefaultAsync(c => c.client_id == appointment.client_id);
+            if (client != null)
+            {
+                var clientEmail = client.email; // Assuming the Client entity has an email property
+                var subject = "Salon Cleopatra - Spotkanie anulowane";
+                var body = $"Szanowny/a {client.name},\n\nTwoje spotkanie zaplanowane na {appointment.appointment_date} zostało anulowane ze względu na urlop pracownika.\n\nPrzepraszamy za niedogodności.\n\nZ wyrazami szacunku,\nSalon Cleopatra";
+
+                await _emailService.SendEmailAsync(clientEmail, subject, body);
+            }
         }
 
         await _context.SaveChangesAsync();

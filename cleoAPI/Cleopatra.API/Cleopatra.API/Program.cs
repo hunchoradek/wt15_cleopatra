@@ -19,7 +19,8 @@ builder.Services.AddSwaggerGen();
 // Database context configuration
 builder.Services.AddDbContext<SalonContext>(options =>
     options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"),
-    new MySqlServerVersion(new Version(8, 0, 21))));
+    new MySqlServerVersion(new Version(8, 0, 21)),
+    b => b.MigrationsAssembly("Cleopatra.Infrastructure"))); // Specify the migrations assembly
 
 // CORS configuration
 builder.Services.AddCors(options =>
@@ -61,6 +62,9 @@ builder.Services.AddFluentEmail(builder.Configuration["EmailSettings:FromEmail"]
 // Register services
 builder.Services.AddScoped<NotificationService>();
 builder.Services.AddScoped<EmailService>();
+
+// Register the background service
+builder.Services.AddHostedService<AppointmentReminderService>();
 
 builder.Services.AddControllers()
     .AddJsonOptions(options =>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 23, 2025 at 06:41 PM
+-- Generation Time: Jan 26, 2025 at 08:07 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -37,53 +37,55 @@ CREATE TABLE `appointments` (
   `end_time` time NOT NULL,
   `status` enum('scheduled','completed','cancelled') DEFAULT 'scheduled',
   `notes` text DEFAULT NULL,
-  `employee_id` int(11) DEFAULT NULL
+  `employee_id` int(11) DEFAULT NULL,
+  `ReminderSent` tinyint(1) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `appointments`
 --
 
-INSERT INTO `appointments` (`appointment_id`, `client_id`, `employee_name`, `service`, `appointment_date`, `start_time`, `end_time`, `status`, `notes`, `employee_id`) VALUES
-(1, 1, 'Anna Kowalska', 'Strzyżenie damskie', '2024-03-04', '09:00:00', '09:30:00', 'scheduled', 'Klasyczne cięcie', 2),
-(2, 2, 'Jan Nowak', 'Manicure', '2024-03-04', '10:00:00', '10:45:00', 'scheduled', 'Delikatne wykończenie', 3),
-(3, 3, 'Ewa Zielińska', 'Masaż relaksacyjny', '2024-03-04', '11:00:00', '12:00:00', 'scheduled', 'Prośba o relaksacyjną muzykę', 7),
-(4, 4, 'Piotr Wiśniewski', 'Barber', '2024-03-04', '12:30:00', '13:00:00', 'scheduled', 'Krótka broda', 6),
-(5, 5, 'Maria Lewandowska', 'Masaż twarzy', '2024-03-04', '13:30:00', '14:30:00', 'scheduled', 'Wrażliwa cera', 7),
-(6, 6, 'Anna Malinowska', 'Manicure', '2024-03-05', '09:00:00', '09:45:00', 'scheduled', NULL, 3),
-(7, 7, 'Piotr Wiśniewski', 'Strzyżenie męskie', '2024-03-05', '10:00:00', '10:30:00', 'scheduled', 'Prośba o klasyczny styl', 2),
-(8, 8, 'Katarzyna Nowicka', 'Masaż sportowy', '2024-03-05', '11:00:00', '12:00:00', 'scheduled', 'Prośba o większy nacisk', 7),
-(9, 9, 'Tomasz Kowalczyk', 'Strzyżenie męskie', '2024-03-05', '12:30:00', '13:00:00', 'scheduled', NULL, 6),
-(10, 10, 'Michał Zieliński', 'Manicure', '2024-03-05', '13:30:00', '14:15:00', 'scheduled', 'Prośba o delikatne wykończenie', 3),
-(11, 11, 'Joanna Wiśniewska', 'Strzyżenie damskie', '2024-03-06', '09:00:00', '09:30:00', 'scheduled', 'Styl romantyczny', 2),
-(12, 12, 'Karolina Lewandowska', 'Masaż relaksacyjny', '2024-03-06', '10:00:00', '11:00:00', 'scheduled', 'Prośba o aromaterapię', 7),
-(13, 13, 'Adam Kowalski', 'Barber', '2024-03-06', '11:30:00', '12:00:00', 'scheduled', 'Krótka broda', 6),
-(14, 14, 'Paulina Nowak', 'Manicure', '2024-03-06', '12:30:00', '13:15:00', 'scheduled', 'Zdobienie paznokci', 3),
-(15, 15, 'Marcin Malinowski', 'Strzyżenie męskie', '2024-03-06', '14:00:00', '14:30:00', 'scheduled', NULL, 2),
-(16, 16, 'Ewelina Kamińska', 'Masaż sportowy', '2024-03-07', '09:00:00', '10:00:00', 'scheduled', 'Prośba o relaksacyjną muzykę', 7),
-(17, 17, 'Tomasz Lewandowski', 'Barber', '2024-03-07', '10:30:00', '11:00:00', 'scheduled', 'Delikatne cięcie', 6),
-(18, 18, 'Agnieszka Zielińska', 'Manicure', '2024-03-07', '11:30:00', '12:15:00', 'scheduled', 'Subtelne zdobienie', 3),
-(19, 19, 'Paweł Kwiatkowski', 'Strzyżenie męskie', '2024-03-07', '12:30:00', '13:00:00', 'scheduled', NULL, 2),
-(20, 20, 'Ewa Kowalczyk', 'Masaż relaksacyjny', '2024-03-08', '09:00:00', '10:00:00', 'scheduled', 'Prośba o delikatny dotyk', 7),
-(21, 21, 'Mateusz Nowakowski', 'Strzyżenie męskie', '2024-03-08', '10:30:00', '11:00:00', 'scheduled', 'Prośba o klasyczny styl', 2),
-(22, 22, 'Monika Wiśniewska', 'Manicure', '2024-03-08', '11:30:00', '12:15:00', 'scheduled', NULL, 3),
-(23, 23, 'Andrzej Kamiński', 'Barber', '2024-03-08', '12:30:00', '13:00:00', 'scheduled', 'Krótka broda', 6),
-(24, 24, 'Magdalena Lewandowska', 'Masaż sportowy', '2024-03-08', '13:30:00', '14:30:00', 'scheduled', 'Mocniejsze techniki', 7),
-(25, 25, 'Janina Zielińska', 'Manicure', '2024-03-09', '09:00:00', '09:45:00', 'scheduled', 'Delikatne wykończenie', 3),
-(26, 1, 'Anna Kowalska', 'Masaż twarzy', '2024-03-09', '10:00:00', '11:00:00', 'scheduled', 'Prośba o naturalne kosmetyki', 7),
-(27, 2, 'Jan Nowak', 'Barber', '2024-03-09', '11:30:00', '12:00:00', 'scheduled', 'Klasyczne cięcie', 6),
-(28, 3, 'Ewa Zielińska', 'Strzyżenie damskie', '2024-03-09', '12:30:00', '13:00:00', 'scheduled', 'Styl romantyczny', 2),
-(29, 4, 'Piotr Wiśniewski', 'Masaż relaksacyjny', '2024-03-09', '13:30:00', '14:30:00', 'scheduled', 'Prośba o ciszę', 7),
-(30, 5, 'Maria Lewandowska', 'Manicure', '2024-03-10', '10:00:00', '10:45:00', 'scheduled', 'Naturalne zdobienia', 3),
-(31, 6, 'Anna Malinowska', 'Barber', '2024-03-10', '11:00:00', '11:30:00', 'scheduled', 'Krótka broda', 6),
-(32, 7, 'Piotr Wiśniewski', 'Strzyżenie męskie', '2024-03-10', '12:00:00', '12:30:00', 'scheduled', NULL, 2),
-(33, 8, 'Katarzyna Nowicka', 'Masaż twarzy', '2024-03-10', '13:00:00', '14:00:00', 'scheduled', 'Wrażliwa cera', 7),
-(34, 9, 'Tomasz Kowalczyk', 'Manicure', '2024-03-11', '09:00:00', '09:45:00', 'scheduled', 'Delikatne wykończenie', 3),
-(35, 10, 'Michał Zieliński', 'Barber', '2024-03-11', '10:00:00', '10:30:00', 'scheduled', NULL, 6),
-(36, 26, 'Anna Kowalska', 'Strzyżenie damskie', '2025-01-22', '10:00:00', '10:30:00', 'scheduled', 'test appoint', 1),
-(37, 5, 'Anna Kowalska', 'Strzyżenie damskie', '2025-01-22', '12:00:00', '12:30:00', 'scheduled', 'test appoint2', 1),
-(38, 1, 'paweleren', 'Strzyżenie', '2024-03-04', '09:00:00', '10:00:00', 'cancelled', 'Przykładowa notatka', 9),
-(39, 1, 'paweleren', 'Strzyżenie', '2024-03-04', '13:00:00', '14:00:00', 'cancelled', 'Testowa rezerwacja', 9);
+INSERT INTO `appointments` (`appointment_id`, `client_id`, `employee_name`, `service`, `appointment_date`, `start_time`, `end_time`, `status`, `notes`, `employee_id`, `ReminderSent`) VALUES
+(1, 1, 'Anna Kowalska', 'Strzyżenie damskie', '2024-03-04', '09:00:00', '09:30:00', 'scheduled', 'Klasyczne cięcie', 2, 0),
+(2, 2, 'Jan Nowak', 'Manicure', '2024-03-04', '10:00:00', '10:45:00', 'scheduled', 'Delikatne wykończenie', 3, 0),
+(3, 3, 'Ewa Zielińska', 'Masaż relaksacyjny', '2024-03-04', '11:00:00', '12:00:00', 'cancelled', 'Prośba o relaksacyjną muzykę', 7, 0),
+(4, 4, 'Piotr Wiśniewski', 'Barber', '2024-03-04', '12:30:00', '13:00:00', 'scheduled', 'Krótka broda', 6, 0),
+(5, 5, 'Maria Lewandowska', 'Masaż twarzy', '2024-03-04', '13:30:00', '14:30:00', 'cancelled', 'Wrażliwa cera', 7, 0),
+(6, 6, 'Anna Malinowska', 'Manicure', '2024-03-05', '09:00:00', '09:45:00', 'scheduled', NULL, 3, 0),
+(7, 7, 'Piotr Wiśniewski', 'Strzyżenie męskie', '2024-03-05', '10:00:00', '10:30:00', 'scheduled', 'Prośba o klasyczny styl', 2, 0),
+(8, 8, 'Katarzyna Nowicka', 'Masaż sportowy', '2024-03-05', '11:00:00', '12:00:00', 'cancelled', 'Prośba o większy nacisk', 7, 0),
+(9, 9, 'Tomasz Kowalczyk', 'Strzyżenie męskie', '2024-03-05', '12:30:00', '13:00:00', 'scheduled', NULL, 6, 0),
+(10, 10, 'Michał Zieliński', 'Manicure', '2024-03-05', '13:30:00', '14:15:00', 'scheduled', 'Prośba o delikatne wykończenie', 3, 0),
+(11, 11, 'Joanna Wiśniewska', 'Strzyżenie damskie', '2024-03-06', '09:00:00', '09:30:00', 'scheduled', 'Styl romantyczny', 2, 0),
+(12, 12, 'Karolina Lewandowska', 'Masaż relaksacyjny', '2024-03-06', '10:00:00', '11:00:00', 'cancelled', 'Prośba o aromaterapię', 7, 0),
+(13, 13, 'Adam Kowalski', 'Barber', '2024-03-06', '11:30:00', '12:00:00', 'scheduled', 'Krótka broda', 6, 0),
+(14, 14, 'Paulina Nowak', 'Manicure', '2024-03-06', '12:30:00', '13:15:00', 'scheduled', 'Zdobienie paznokci', 3, 0),
+(15, 15, 'Marcin Malinowski', 'Strzyżenie męskie', '2024-03-06', '14:00:00', '14:30:00', 'scheduled', NULL, 2, 0),
+(16, 16, 'Ewelina Kamińska', 'Masaż sportowy', '2024-03-07', '09:00:00', '10:00:00', 'cancelled', 'Prośba o relaksacyjną muzykę', 7, 0),
+(17, 17, 'Tomasz Lewandowski', 'Barber', '2024-03-07', '10:30:00', '11:00:00', 'scheduled', 'Delikatne cięcie', 6, 0),
+(18, 18, 'Agnieszka Zielińska', 'Manicure', '2024-03-07', '11:30:00', '12:15:00', 'scheduled', 'Subtelne zdobienie', 3, 0),
+(19, 19, 'Paweł Kwiatkowski', 'Strzyżenie męskie', '2024-03-07', '12:30:00', '13:00:00', 'scheduled', NULL, 2, 0),
+(20, 20, 'Ewa Kowalczyk', 'Masaż relaksacyjny', '2024-03-08', '09:00:00', '10:00:00', 'cancelled', 'Prośba o delikatny dotyk', 7, 0),
+(21, 21, 'Mateusz Nowakowski', 'Strzyżenie męskie', '2024-03-08', '10:30:00', '11:00:00', 'scheduled', 'Prośba o klasyczny styl', 2, 0),
+(22, 22, 'Monika Wiśniewska', 'Manicure', '2024-03-08', '11:30:00', '12:15:00', 'scheduled', NULL, 3, 0),
+(23, 23, 'Andrzej Kamiński', 'Barber', '2024-03-08', '12:30:00', '13:00:00', 'scheduled', 'Krótka broda', 6, 0),
+(24, 24, 'Magdalena Lewandowska', 'Masaż sportowy', '2024-03-08', '13:30:00', '14:30:00', 'cancelled', 'Mocniejsze techniki', 7, 0),
+(25, 25, 'Janina Zielińska', 'Manicure', '2024-03-09', '09:00:00', '09:45:00', 'scheduled', 'Delikatne wykończenie', 3, 0),
+(26, 1, 'Anna Kowalska', 'Masaż twarzy', '2024-03-09', '10:00:00', '11:00:00', 'cancelled', 'Prośba o naturalne kosmetyki', 7, 0),
+(27, 2, 'Jan Nowak', 'Barber', '2024-03-09', '11:30:00', '12:00:00', 'scheduled', 'Klasyczne cięcie', 6, 0),
+(28, 3, 'Ewa Zielińska', 'Strzyżenie damskie', '2024-03-09', '12:30:00', '13:00:00', 'scheduled', 'Styl romantyczny', 2, 0),
+(29, 4, 'Piotr Wiśniewski', 'Masaż relaksacyjny', '2024-03-09', '13:30:00', '14:30:00', 'cancelled', 'Prośba o ciszę', 7, 0),
+(30, 5, 'Maria Lewandowska', 'Manicure', '2024-03-10', '10:00:00', '10:45:00', 'scheduled', 'Naturalne zdobienia', 3, 0),
+(31, 6, 'Anna Malinowska', 'Barber', '2024-03-10', '11:00:00', '11:30:00', 'scheduled', 'Krótka broda', 6, 0),
+(32, 7, 'Piotr Wiśniewski', 'Strzyżenie męskie', '2024-03-10', '12:00:00', '12:30:00', 'scheduled', NULL, 2, 0),
+(33, 8, 'Katarzyna Nowicka', 'Masaż twarzy', '2024-03-10', '13:00:00', '14:00:00', 'cancelled', 'Wrażliwa cera', 7, 0),
+(34, 9, 'Tomasz Kowalczyk', 'Manicure', '2024-03-11', '09:00:00', '09:45:00', 'scheduled', 'Delikatne wykończenie', 3, 0),
+(35, 10, 'Michał Zieliński', 'Barber', '2024-03-11', '10:00:00', '10:30:00', 'scheduled', NULL, 6, 0),
+(36, 26, 'Anna Kowalska', 'Strzyżenie damskie', '2025-01-22', '10:00:00', '10:30:00', 'scheduled', 'test appoint', 1, 0),
+(37, 5, 'Anna Kowalska', 'Strzyżenie damskie', '2025-01-22', '12:00:00', '12:30:00', 'scheduled', 'test appoint2', 1, 0),
+(38, 1, 'paweleren', 'Strzyżenie', '2024-03-04', '09:00:00', '10:00:00', 'cancelled', 'Przykładowa notatka', 9, 0),
+(39, 1, 'paweleren', 'Strzyżenie', '2024-03-04', '13:00:00', '14:00:00', 'cancelled', 'Testowa rezerwacja', 9, 0),
+(40, 27, 'Anna Kowalska', 'Strzyżenie damskie', '2025-01-25', '12:30:00', '13:00:00', 'scheduled', 'string', 1, 0);
 
 -- --------------------------------------------------------
 
@@ -149,7 +151,8 @@ INSERT INTO `clients` (`client_id`, `name`, `phone_number`, `email`, `notes`, `i
 (23, 'Andrzej Kamiński', '333666999', 'andrzej.kaminski@example.com', 'Prośba o dłuższe masaże', 0),
 (24, 'Magdalena Lewandowska', '444777000', 'magdalena.lewandowska@example.com', 'Woli kosmetyki ekologiczne', 0),
 (25, 'Janina Zielińska', '555888111', 'janina.zielinska@example.com', 'Ma wrażliwą skórę', 0),
-(26, 'Testowy Test', '511298027', 'test@test.com', 'ttestowa', 0);
+(26, 'Testowy Test', '511298027', 'test@test.com', 'ttestowa', 0),
+(27, 'siema', '123321123', 'snejkbeast@gmail.com', 'string', 0);
 
 -- --------------------------------------------------------
 
@@ -227,7 +230,18 @@ CREATE TABLE `reports` (
 --
 
 INSERT INTO `reports` (`report_id`, `type`, `created_at`) VALUES
-(3, 'Client', '2025-01-23 16:08:44');
+(3, 'Client', '2025-01-23 16:08:44'),
+(4, 'Resource', '2025-01-25 11:34:31'),
+(5, 'Resource', '2025-01-25 11:35:08'),
+(6, 'Client', '2025-01-25 11:35:59'),
+(7, 'Resource', '2025-01-25 11:41:12'),
+(8, 'Resource', '2025-01-25 11:45:10'),
+(9, 'Resource', '2025-01-25 11:49:06'),
+(10, 'Resource', '2025-01-25 11:54:26'),
+(11, 'Resource', '2025-01-25 11:59:08'),
+(12, 'Resource', '2025-01-25 12:03:09'),
+(13, 'Resource', '2025-01-25 12:06:28'),
+(14, 'Resource', '2025-01-25 12:09:28');
 
 -- --------------------------------------------------------
 
@@ -316,7 +330,8 @@ INSERT INTO `services` (`service_id`, `name`, `description`, `duration`, `price`
 (5, 'Masaż sportowy', 'Masaż regeneracyjny dla sportowców', 60, 170.00, 2),
 (6, 'Masaż twarzy', 'Relaksacyjny masaż twarzy i szyi', 60, 120.00, 2),
 (7, 'Manicure', 'Pielęgnacja paznokci z malowaniem', 45, 100.00, 3),
-(8, 'Manicure z zdobieniem', 'Manicure z dodatkowymi zdobieniami', 60, 120.00, 3);
+(8, 'Manicure z zdobieniem', 'Manicure z dodatkowymi zdobieniami', 60, 120.00, 3),
+(20, 'string', 'string', 30, 10.00, 1);
 
 -- --------------------------------------------------------
 
@@ -337,7 +352,8 @@ CREATE TABLE `vacations` (
 
 INSERT INTO `vacations` (`vacation_id`, `employee_id`, `start_date`, `end_date`) VALUES
 (1, 2, '2024-03-01', '2024-03-07'),
-(2, 3, '2024-03-10', '2024-03-10');
+(2, 3, '2024-03-10', '2024-03-10'),
+(3, 7, '2024-03-01', '2024-03-10');
 
 -- --------------------------------------------------------
 
@@ -442,7 +458,7 @@ ALTER TABLE `__efmigrationshistory`
 -- AUTO_INCREMENT for table `appointments`
 --
 ALTER TABLE `appointments`
-  MODIFY `appointment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `appointment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- AUTO_INCREMENT for table `business`
@@ -454,7 +470,7 @@ ALTER TABLE `business`
 -- AUTO_INCREMENT for table `clients`
 --
 ALTER TABLE `clients`
-  MODIFY `client_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `client_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `employees`
@@ -472,7 +488,7 @@ ALTER TABLE `notifications`
 -- AUTO_INCREMENT for table `reports`
 --
 ALTER TABLE `reports`
-  MODIFY `report_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `report_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `resources`
@@ -490,13 +506,13 @@ ALTER TABLE `servicecategories`
 -- AUTO_INCREMENT for table `services`
 --
 ALTER TABLE `services`
-  MODIFY `service_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `service_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `vacations`
 --
 ALTER TABLE `vacations`
-  MODIFY `vacation_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `vacation_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables
