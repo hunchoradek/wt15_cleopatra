@@ -3,12 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E260235F-E27C-4283-BEF8-354C1BB2F71E}|Cleopatra.API\\Cleopatra.API.csproj|C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\cleopatra.api\\controllers\\publiccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E260235F-E27C-4283-BEF8-354C1BB2F71E}|Cleopatra.API\\Cleopatra.API.csproj|solutionrelative:cleopatra.api\\controllers\\publiccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E260235F-E27C-4283-BEF8-354C1BB2F71E}|Cleopatra.API\\Cleopatra.API.csproj|C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\cleopatra.api\\controllers\\employeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E260235F-E27C-4283-BEF8-354C1BB2F71E}|Cleopatra.API\\Cleopatra.API.csproj|solutionrelative:cleopatra.api\\controllers\\employeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E260235F-E27C-4283-BEF8-354C1BB2F71E}|Cleopatra.API\\Cleopatra.API.csproj|c:\\users\\radek\\documents\\wt15_cleopatra\\cleoapi\\cleopatra.api\\cleopatra.api\\controllers\\vacationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{14FAAEEF-A5C3-4CFF-93B5-2CF1D002EBAB}|Cleopatra.Domain\\Cleopatra.Domain.csproj|C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\cleopatra.domain\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14FAAEEF-A5C3-4CFF-93B5-2CF1D002EBAB}|Cleopatra.Domain\\Cleopatra.Domain.csproj|solutionrelative:cleopatra.domain\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E260235F-E27C-4283-BEF8-354C1BB2F71E}|Cleopatra.API\\Cleopatra.API.csproj|C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\cleopatra.api\\controllers\\vacationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E260235F-E27C-4283-BEF8-354C1BB2F71E}|Cleopatra.API\\Cleopatra.API.csproj|solutionrelative:cleopatra.api\\controllers\\vacationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E260235F-E27C-4283-BEF8-354C1BB2F71E}|Cleopatra.API\\Cleopatra.API.csproj|C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\cleopatra.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E260235F-E27C-4283-BEF8-354C1BB2F71E}|Cleopatra.API\\Cleopatra.API.csproj|solutionrelative:cleopatra.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E260235F-E27C-4283-BEF8-354C1BB2F71E}|Cleopatra.API\\Cleopatra.API.csproj|C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\cleopatra.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E260235F-E27C-4283-BEF8-354C1BB2F71E}|Cleopatra.API\\Cleopatra.API.csproj|solutionrelative:cleopatra.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E260235F-E27C-4283-BEF8-354C1BB2F71E}|Cleopatra.API\\Cleopatra.API.csproj|c:\\users\\radek\\documents\\wt15_cleopatra\\cleoapi\\cleopatra.api\\cleopatra.api\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E260235F-E27C-4283-BEF8-354C1BB2F71E}|Cleopatra.API\\Cleopatra.API.csproj|solutionrelative:cleopatra.api\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E260235F-E27C-4283-BEF8-354C1BB2F71E}|Cleopatra.API\\Cleopatra.API.csproj|C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\cleopatra.api\\controllers\\notificationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E260235F-E27C-4283-BEF8-354C1BB2F71E}|Cleopatra.API\\Cleopatra.API.csproj|solutionrelative:cleopatra.api\\controllers\\notificationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E260235F-E27C-4283-BEF8-354C1BB2F71E}|Cleopatra.API\\Cleopatra.API.csproj|C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\cleopatra.api\\services\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E260235F-E27C-4283-BEF8-354C1BB2F71E}|Cleopatra.API\\Cleopatra.API.csproj|solutionrelative:cleopatra.api\\services\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E260235F-E27C-4283-BEF8-354C1BB2F71E}|Cleopatra.API\\Cleopatra.API.csproj|c:\\users\\radek\\documents\\wt15_cleopatra\\cleoapi\\cleopatra.api\\cleopatra.api\\controllers\\publiccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E260235F-E27C-4283-BEF8-354C1BB2F71E}|Cleopatra.API\\Cleopatra.API.csproj|solutionrelative:cleopatra.api\\controllers\\publiccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{42BD9253-EA40-4162-B234-714A60FC8424}|Cleopatra.Infrastructure\\Cleopatra.Infrastructure.csproj|C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\cleopatra.infrastructure\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,10 +49,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{14FAAEEF-A5C3-4CFF-93B5-2CF1D002EBAB}|Cleopatra.Domain\\Cleopatra.Domain.csproj|C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\cleopatra.domain\\vacation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{14FAAEEF-A5C3-4CFF-93B5-2CF1D002EBAB}|Cleopatra.Domain\\Cleopatra.Domain.csproj|solutionrelative:cleopatra.domain\\vacation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E260235F-E27C-4283-BEF8-354C1BB2F71E}|Cleopatra.API\\Cleopatra.API.csproj|C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\cleopatra.api\\controllers\\employeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E260235F-E27C-4283-BEF8-354C1BB2F71E}|Cleopatra.API\\Cleopatra.API.csproj|solutionrelative:cleopatra.api\\controllers\\employeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{14FAAEEF-A5C3-4CFF-93B5-2CF1D002EBAB}|Cleopatra.Domain\\Cleopatra.Domain.csproj|C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\cleopatra.domain\\updatepasswordrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -47,10 +71,6 @@
       "RelativeMoniker": "D:0:0:{E260235F-E27C-4283-BEF8-354C1BB2F71E}|Cleopatra.API\\Cleopatra.API.csproj|solutionrelative:cleopatra.api\\controllers\\servicescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E260235F-E27C-4283-BEF8-354C1BB2F71E}|Cleopatra.API\\Cleopatra.API.csproj|C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\cleopatra.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E260235F-E27C-4283-BEF8-354C1BB2F71E}|Cleopatra.API\\Cleopatra.API.csproj|solutionrelative:cleopatra.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E260235F-E27C-4283-BEF8-354C1BB2F71E}|Cleopatra.API\\Cleopatra.API.csproj|C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\cleopatra.api\\controllers\\reportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E260235F-E27C-4283-BEF8-354C1BB2F71E}|Cleopatra.API\\Cleopatra.API.csproj|solutionrelative:cleopatra.api\\controllers\\reportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -61,18 +81,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{14FAAEEF-A5C3-4CFF-93B5-2CF1D002EBAB}|Cleopatra.Domain\\Cleopatra.Domain.csproj|C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\cleopatra.domain\\vacationrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{14FAAEEF-A5C3-4CFF-93B5-2CF1D002EBAB}|Cleopatra.Domain\\Cleopatra.Domain.csproj|solutionrelative:cleopatra.domain\\vacationrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E260235F-E27C-4283-BEF8-354C1BB2F71E}|Cleopatra.API\\Cleopatra.API.csproj|C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\cleopatra.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{E260235F-E27C-4283-BEF8-354C1BB2F71E}|Cleopatra.API\\Cleopatra.API.csproj|solutionrelative:cleopatra.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E260235F-E27C-4283-BEF8-354C1BB2F71E}|Cleopatra.API\\Cleopatra.API.csproj|C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\cleopatra.api\\services\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E260235F-E27C-4283-BEF8-354C1BB2F71E}|Cleopatra.API\\Cleopatra.API.csproj|solutionrelative:cleopatra.api\\services\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E260235F-E27C-4283-BEF8-354C1BB2F71E}|Cleopatra.API\\Cleopatra.API.csproj|C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\cleopatra.api\\controllers\\notificationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E260235F-E27C-4283-BEF8-354C1BB2F71E}|Cleopatra.API\\Cleopatra.API.csproj|solutionrelative:cleopatra.api\\controllers\\notificationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E260235F-E27C-4283-BEF8-354C1BB2F71E}|Cleopatra.API\\Cleopatra.API.csproj|C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\cleopatra.api\\cleopatra.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -97,10 +105,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E260235F-E27C-4283-BEF8-354C1BB2F71E}|Cleopatra.API\\Cleopatra.API.csproj|C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\cleopatra.api\\helpers\\workinghourshelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E260235F-E27C-4283-BEF8-354C1BB2F71E}|Cleopatra.API\\Cleopatra.API.csproj|solutionrelative:cleopatra.api\\helpers\\workinghourshelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{14FAAEEF-A5C3-4CFF-93B5-2CF1D002EBAB}|Cleopatra.Domain\\Cleopatra.Domain.csproj|C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\cleopatra.domain\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{14FAAEEF-A5C3-4CFF-93B5-2CF1D002EBAB}|Cleopatra.Domain\\Cleopatra.Domain.csproj|solutionrelative:cleopatra.domain\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E260235F-E27C-4283-BEF8-354C1BB2F71E}|Cleopatra.API\\Cleopatra.API.csproj|C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\cleopatra.api\\controllers\\recourcescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -138,108 +142,115 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 9,
+              "Title": "DataContext.cs",
+              "DocumentMoniker": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.Infrastructure\\DataContext.cs",
+              "RelativeDocumentMoniker": "Cleopatra.Infrastructure\\DataContext.cs",
+              "ToolTip": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.Infrastructure\\DataContext.cs",
+              "RelativeToolTip": "Cleopatra.Infrastructure\\DataContext.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA8AAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T17:49:36.297Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "NotificationsController.cs",
+              "DocumentMoniker": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.API\\Controllers\\NotificationsController.cs",
+              "RelativeDocumentMoniker": "Cleopatra.API\\Controllers\\NotificationsController.cs",
+              "ToolTip": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.API\\Controllers\\NotificationsController.cs",
+              "RelativeToolTip": "Cleopatra.API\\Controllers\\NotificationsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T21:30:18.667Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.API\\Program.cs",
+              "RelativeDocumentMoniker": "Cleopatra.API\\Program.cs",
+              "ToolTip": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.API\\Program.cs",
+              "RelativeToolTip": "Cleopatra.API\\Program.cs",
+              "ViewState": "AQIAACcAAAAAAAAAAAAAADsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T17:58:39.11Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.API\\Services\\EmailService.cs",
+              "RelativeDocumentMoniker": "Cleopatra.API\\Services\\EmailService.cs",
+              "ToolTip": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.API\\Services\\EmailService.cs",
+              "RelativeToolTip": "Cleopatra.API\\Services\\EmailService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T17:24:39.632Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.API\\appsettings.json",
+              "RelativeDocumentMoniker": "Cleopatra.API\\appsettings.json",
+              "ToolTip": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.API\\appsettings.json",
+              "RelativeToolTip": "Cleopatra.API\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-29T17:57:13.443Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EmployeesController.cs",
+              "DocumentMoniker": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.API\\Controllers\\EmployeesController.cs",
+              "RelativeDocumentMoniker": "Cleopatra.API\\Controllers\\EmployeesController.cs",
+              "ToolTip": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.API\\Controllers\\EmployeesController.cs",
+              "RelativeToolTip": "Cleopatra.API\\Controllers\\EmployeesController.cs",
+              "ViewState": "AQIAADMBAAAAAAAAAAAxwEwBAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-11T12:03:52.547Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "VacationsController.cs",
               "DocumentMoniker": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.API\\Controllers\\VacationsController.cs",
               "RelativeDocumentMoniker": "Cleopatra.API\\Controllers\\VacationsController.cs",
               "ToolTip": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.API\\Controllers\\VacationsController.cs",
               "RelativeToolTip": "Cleopatra.API\\Controllers\\VacationsController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAgAAAAjAAAA",
+              "ViewState": "AQIAAF4AAAAAAAAAAAAcwHMAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-26T15:55:09.679Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Vacation.cs",
-              "DocumentMoniker": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.Domain\\Vacation.cs",
-              "RelativeDocumentMoniker": "Cleopatra.Domain\\Vacation.cs",
-              "ToolTip": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.Domain\\Vacation.cs",
-              "RelativeToolTip": "Cleopatra.Domain\\Vacation.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "DocumentIndex": 1,
+              "Title": "Appointment.cs",
+              "DocumentMoniker": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.Domain\\Appointment.cs",
+              "RelativeDocumentMoniker": "Cleopatra.Domain\\Appointment.cs",
+              "ToolTip": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.Domain\\Appointment.cs",
+              "RelativeToolTip": "Cleopatra.Domain\\Appointment.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAgwCcAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-11T12:12:00.773Z"
+              "WhenOpened": "2024-10-29T21:11:42.925Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "Client.cs",
-              "DocumentMoniker": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.Domain\\Client.cs",
-              "RelativeDocumentMoniker": "Cleopatra.Domain\\Client.cs",
-              "ToolTip": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.Domain\\Client.cs",
-              "RelativeToolTip": "Cleopatra.Domain\\Client.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T17:42:43.653Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Notification.cs",
-              "DocumentMoniker": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.Domain\\Notification.cs",
-              "RelativeDocumentMoniker": "Cleopatra.Domain\\Notification.cs",
-              "ToolTip": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.Domain\\Notification.cs",
-              "RelativeToolTip": "Cleopatra.Domain\\Notification.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T21:27:22.235Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ClientsController.cs",
-              "DocumentMoniker": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.API\\Controllers\\ClientsController.cs",
-              "RelativeDocumentMoniker": "Cleopatra.API\\Controllers\\ClientsController.cs",
-              "ToolTip": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.API\\Controllers\\ClientsController.cs",
-              "RelativeToolTip": "Cleopatra.API\\Controllers\\ClientsController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGAAAAA6AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T18:04:01.635Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ReportsController.cs",
-              "DocumentMoniker": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.API\\Controllers\\ReportsController.cs",
-              "RelativeDocumentMoniker": "Cleopatra.API\\Controllers\\ReportsController.cs",
-              "ToolTip": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.API\\Controllers\\ReportsController.cs",
-              "RelativeToolTip": "Cleopatra.API\\Controllers\\ReportsController.cs",
-              "ViewState": "AQIAADQBAAAAAAAAAAAqwE0BAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T15:03:51.177Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "EmployeesController.cs",
-              "DocumentMoniker": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.API\\Controllers\\EmployeesController.cs",
-              "RelativeDocumentMoniker": "Cleopatra.API\\Controllers\\EmployeesController.cs",
-              "ToolTip": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.API\\Controllers\\EmployeesController.cs",
-              "RelativeToolTip": "Cleopatra.API\\Controllers\\EmployeesController.cs",
-              "ViewState": "AQIAAD4BAAAAAAAAAAAUwFwBAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-11T12:03:52.547Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "UpdatePasswordRequest.cs",
-              "DocumentMoniker": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.Domain\\UpdatePasswordRequest.cs",
-              "RelativeDocumentMoniker": "Cleopatra.Domain\\UpdatePasswordRequest.cs",
-              "ToolTip": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.Domain\\UpdatePasswordRequest.cs",
-              "RelativeToolTip": "Cleopatra.Domain\\UpdatePasswordRequest.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-26T15:10:14.151Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "PublicController.cs",
               "DocumentMoniker": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.API\\Controllers\\PublicController.cs",
               "RelativeDocumentMoniker": "Cleopatra.API\\Controllers\\PublicController.cs",
@@ -252,19 +263,98 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DataContext.cs",
-              "DocumentMoniker": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.Infrastructure\\DataContext.cs",
-              "RelativeDocumentMoniker": "Cleopatra.Infrastructure\\DataContext.cs",
-              "ToolTip": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.Infrastructure\\DataContext.cs",
-              "RelativeToolTip": "Cleopatra.Infrastructure\\DataContext.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA8AAAAyAAAA",
+              "DocumentIndex": 12,
+              "Title": "UpdatePasswordRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.Domain\\UpdatePasswordRequest.cs",
+              "RelativeDocumentMoniker": "Cleopatra.Domain\\UpdatePasswordRequest.cs",
+              "ToolTip": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.Domain\\UpdatePasswordRequest.cs",
+              "RelativeToolTip": "Cleopatra.Domain\\UpdatePasswordRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T17:49:36.297Z"
+              "WhenOpened": "2025-01-26T15:10:14.151Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 7,
+              "Title": "NotificationService.cs",
+              "DocumentMoniker": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.API\\Services\\NotificationService.cs",
+              "RelativeDocumentMoniker": "Cleopatra.API\\Services\\NotificationService.cs",
+              "ToolTip": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.API\\Services\\NotificationService.cs",
+              "RelativeToolTip": "Cleopatra.API\\Services\\NotificationService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADgAAABKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-24T13:34:46.707Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ReportsController.cs",
+              "DocumentMoniker": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.API\\Controllers\\ReportsController.cs",
+              "RelativeDocumentMoniker": "Cleopatra.API\\Controllers\\ReportsController.cs",
+              "ToolTip": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.API\\Controllers\\ReportsController.cs",
+              "RelativeToolTip": "Cleopatra.API\\Controllers\\ReportsController.cs",
+              "ViewState": "AQIAADQBAAAAAAAAAAAqwE0BAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-23T15:03:51.177Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ClientsController.cs",
+              "DocumentMoniker": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.API\\Controllers\\ClientsController.cs",
+              "RelativeDocumentMoniker": "Cleopatra.API\\Controllers\\ClientsController.cs",
+              "ToolTip": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.API\\Controllers\\ClientsController.cs",
+              "RelativeToolTip": "Cleopatra.API\\Controllers\\ClientsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGAAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T18:04:01.635Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Notification.cs",
+              "DocumentMoniker": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.Domain\\Notification.cs",
+              "RelativeDocumentMoniker": "Cleopatra.Domain\\Notification.cs",
+              "ToolTip": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.Domain\\Notification.cs",
+              "RelativeToolTip": "Cleopatra.Domain\\Notification.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T21:27:22.235Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Client.cs",
+              "DocumentMoniker": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.Domain\\Client.cs",
+              "RelativeDocumentMoniker": "Cleopatra.Domain\\Client.cs",
+              "ToolTip": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.Domain\\Client.cs",
+              "RelativeToolTip": "Cleopatra.Domain\\Client.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T17:42:43.653Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Vacation.cs",
+              "DocumentMoniker": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.Domain\\Vacation.cs",
+              "RelativeDocumentMoniker": "Cleopatra.Domain\\Vacation.cs",
+              "ToolTip": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.Domain\\Vacation.cs",
+              "RelativeToolTip": "Cleopatra.Domain\\Vacation.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-11T12:12:00.773Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "Service.cs",
               "DocumentMoniker": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.Domain\\Service.cs",
               "RelativeDocumentMoniker": "Cleopatra.Domain\\Service.cs",
@@ -272,35 +362,12 @@
               "RelativeToolTip": "Cleopatra.Domain\\Service.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAABsAAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T21:20:34.103Z"
+              "WhenOpened": "2024-10-29T21:20:34.103Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.API\\Program.cs",
-              "RelativeDocumentMoniker": "Cleopatra.API\\Program.cs",
-              "ToolTip": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.API\\Program.cs",
-              "RelativeToolTip": "Cleopatra.API\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAF8AAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T17:58:39.11Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "NotificationsController.cs",
-              "DocumentMoniker": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.API\\Controllers\\NotificationsController.cs",
-              "RelativeDocumentMoniker": "Cleopatra.API\\Controllers\\NotificationsController.cs",
-              "ToolTip": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.API\\Controllers\\NotificationsController.cs",
-              "RelativeToolTip": "Cleopatra.API\\Controllers\\NotificationsController.cs",
-              "ViewState": "AQIAADQAAAAAAAAAAAAkwHUAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T21:30:18.667Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 16,
               "Title": "ServicesController.cs",
               "DocumentMoniker": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.API\\Controllers\\ServicesController.cs",
               "RelativeDocumentMoniker": "Cleopatra.API\\Controllers\\ServicesController.cs",
@@ -308,11 +375,12 @@
               "RelativeToolTip": "Cleopatra.API\\Controllers\\ServicesController.cs",
               "ViewState": "AQIAABkAAAAAAAAAAAAkwC4AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T21:22:41.109Z"
+              "WhenOpened": "2024-10-29T21:22:41.109Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 18,
               "Title": "AppointmentsController.cs",
               "DocumentMoniker": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.API\\Controllers\\AppointmentsController.cs",
               "RelativeDocumentMoniker": "Cleopatra.API\\Controllers\\AppointmentsController.cs",
@@ -320,35 +388,25 @@
               "RelativeToolTip": "Cleopatra.API\\Controllers\\AppointmentsController.cs",
               "ViewState": "AQIAACkAAAAAAAAAAAAiwEEAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T21:16:14.15Z"
+              "WhenOpened": "2024-10-29T21:16:14.15Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Cleopatra.API",
+              "DocumentIndex": 20,
+              "Title": "Cleopatra.API.csproj",
               "DocumentMoniker": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.API\\Cleopatra.API.csproj",
               "RelativeDocumentMoniker": "Cleopatra.API\\Cleopatra.API.csproj",
               "ToolTip": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.API\\Cleopatra.API.csproj",
               "RelativeToolTip": "Cleopatra.API\\Cleopatra.API.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-01-24T16:18:33.604Z"
+              "WhenOpened": "2025-01-24T16:18:33.604Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.API\\appsettings.json",
-              "RelativeDocumentMoniker": "Cleopatra.API\\appsettings.json",
-              "ToolTip": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.API\\appsettings.json",
-              "RelativeToolTip": "Cleopatra.API\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-10-29T17:57:13.443Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "Employee.cs",
               "DocumentMoniker": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.Domain\\Employee.cs",
               "RelativeDocumentMoniker": "Cleopatra.Domain\\Employee.cs",
@@ -356,11 +414,12 @@
               "RelativeToolTip": "Cleopatra.Domain\\Employee.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-11T11:56:40.656Z"
+              "WhenOpened": "2025-01-11T11:56:40.656Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 19,
               "Title": "VacationRequest.cs",
               "DocumentMoniker": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.Domain\\VacationRequest.cs",
               "RelativeDocumentMoniker": "Cleopatra.Domain\\VacationRequest.cs",
@@ -368,23 +427,12 @@
               "RelativeToolTip": "Cleopatra.Domain\\VacationRequest.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-25T12:18:22.234Z"
+              "WhenOpened": "2025-01-25T12:18:22.234Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "NotificationService.cs",
-              "DocumentMoniker": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.API\\Services\\NotificationService.cs",
-              "RelativeDocumentMoniker": "Cleopatra.API\\Services\\NotificationService.cs",
-              "ToolTip": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.API\\Services\\NotificationService.cs",
-              "RelativeToolTip": "Cleopatra.API\\Services\\NotificationService.cs",
-              "ViewState": "AQIAACIAAAAAAAAAAAAAADgAAABKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-24T13:34:46.707Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "ServiceCategoriesController.cs",
               "DocumentMoniker": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.API\\Controllers\\ServiceCategoriesController.cs",
               "RelativeDocumentMoniker": "Cleopatra.API\\Controllers\\ServiceCategoriesController.cs",
@@ -392,11 +440,12 @@
               "RelativeToolTip": "Cleopatra.API\\Controllers\\ServiceCategoriesController.cs",
               "ViewState": "AQIAACkAAAAAAAAAAAAwwDcAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-11T17:45:57.547Z"
+              "WhenOpened": "2025-01-11T17:45:57.547Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.API\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Cleopatra.API\\Controllers\\AuthController.cs",
@@ -404,11 +453,12 @@
               "RelativeToolTip": "Cleopatra.API\\Controllers\\AuthController.cs",
               "ViewState": "AQIAABMAAAAAAAAAAAAswCcAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-18T22:23:55.765Z"
+              "WhenOpened": "2025-01-18T22:23:55.765Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "Report.cs",
               "DocumentMoniker": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.Domain\\Report.cs",
               "RelativeDocumentMoniker": "Cleopatra.Domain\\Report.cs",
@@ -416,11 +466,12 @@
               "RelativeToolTip": "Cleopatra.Domain\\Report.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T16:57:43.517Z"
+              "WhenOpened": "2025-01-23T16:57:43.517Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "WorkingHoursHelper.cs",
               "DocumentMoniker": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.API\\Helpers\\WorkingHoursHelper.cs",
               "RelativeDocumentMoniker": "Cleopatra.API\\Helpers\\WorkingHoursHelper.cs",
@@ -428,23 +479,12 @@
               "RelativeToolTip": "Cleopatra.API\\Helpers\\WorkingHoursHelper.cs",
               "ViewState": "AQIAACkAAAAAAAAAAAAswDoAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-21T18:18:57.609Z"
+              "WhenOpened": "2025-01-21T18:18:57.609Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "Appointment.cs",
-              "DocumentMoniker": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.Domain\\Appointment.cs",
-              "RelativeDocumentMoniker": "Cleopatra.Domain\\Appointment.cs",
-              "ToolTip": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.Domain\\Appointment.cs",
-              "RelativeToolTip": "Cleopatra.Domain\\Appointment.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAA5wCcAAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T21:11:42.925Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "RecourcesController.cs",
               "DocumentMoniker": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.API\\Controllers\\RecourcesController.cs",
               "RelativeDocumentMoniker": "Cleopatra.API\\Controllers\\RecourcesController.cs",
@@ -452,11 +492,12 @@
               "RelativeToolTip": "Cleopatra.API\\Controllers\\RecourcesController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T21:26:17.159Z"
+              "WhenOpened": "2024-10-29T21:26:17.159Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "BusinessController.cs",
               "DocumentMoniker": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.API\\Controllers\\BusinessController.cs",
               "RelativeDocumentMoniker": "Cleopatra.API\\Controllers\\BusinessController.cs",
@@ -464,11 +505,12 @@
               "RelativeToolTip": "Cleopatra.API\\Controllers\\BusinessController.cs",
               "ViewState": "AQIAAB4AAAAAAAAAAAAAABYAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-11T12:30:49.833Z"
+              "WhenOpened": "2025-01-11T12:30:49.833Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "Resource.cs",
               "DocumentMoniker": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.Domain\\Resource.cs",
               "RelativeDocumentMoniker": "Cleopatra.Domain\\Resource.cs",
@@ -476,11 +518,12 @@
               "RelativeToolTip": "Cleopatra.Domain\\Resource.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T21:24:55.043Z"
+              "WhenOpened": "2024-10-29T21:24:55.043Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "Business.cs",
               "DocumentMoniker": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.Domain\\Business.cs",
               "RelativeDocumentMoniker": "Cleopatra.Domain\\Business.cs",
@@ -488,11 +531,12 @@
               "RelativeToolTip": "Cleopatra.Domain\\Business.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-11T12:27:51.101Z"
+              "WhenOpened": "2025-01-11T12:27:51.101Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "ServiceCategory.cs",
               "DocumentMoniker": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.Domain\\ServiceCategory.cs",
               "RelativeDocumentMoniker": "Cleopatra.Domain\\ServiceCategory.cs",
@@ -500,11 +544,12 @@
               "RelativeToolTip": "Cleopatra.Domain\\ServiceCategory.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-11T17:43:54.615Z"
+              "WhenOpened": "2025-01-11T17:43:54.615Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 31,
               "Title": "Cleopatra.Infrastructure.csproj",
               "DocumentMoniker": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.Infrastructure\\Cleopatra.Infrastructure.csproj",
               "RelativeDocumentMoniker": "Cleopatra.Infrastructure\\Cleopatra.Infrastructure.csproj",
@@ -512,11 +557,12 @@
               "RelativeToolTip": "Cleopatra.Infrastructure\\Cleopatra.Infrastructure.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-10-29T18:11:52.998Z"
+              "WhenOpened": "2024-10-29T18:11:52.998Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 32,
               "Title": "20241029181221_InitialCreate.cs",
               "DocumentMoniker": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.Infrastructure\\Migrations\\20241029181221_InitialCreate.cs",
               "RelativeDocumentMoniker": "Cleopatra.Infrastructure\\Migrations\\20241029181221_InitialCreate.cs",
@@ -524,7 +570,8 @@
               "RelativeToolTip": "Cleopatra.Infrastructure\\Migrations\\20241029181221_InitialCreate.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T18:22:21.244Z"
+              "WhenOpened": "2024-10-29T18:22:21.244Z",
+              "EditorCaption": ""
             }
           ]
         }

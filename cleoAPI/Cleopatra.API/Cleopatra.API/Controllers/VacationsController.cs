@@ -6,7 +6,6 @@ using Cleopatra.Domain;
 
 [Route("api/[controller]")]
 [ApiController]
-[Authorize(Policy = "ManagerOnly")]
 public class VacationsController : ControllerBase
 {
     private readonly SalonContext _context;
@@ -18,6 +17,7 @@ public class VacationsController : ControllerBase
 
     // GET: api/vacations
     [HttpGet]
+    [Authorize(Policy = "ManagerOnly")]
     public async Task<ActionResult<IEnumerable<Vacation>>> GetVacations()
     {
         return Ok(await _context.Vacations.Include(v => v.Employee).ToListAsync());
@@ -25,6 +25,7 @@ public class VacationsController : ControllerBase
 
     // GET: api/vacations/employee/{employeeId}
     [HttpGet("employee/{employeeId}")]
+    [Authorize]
     public async Task<ActionResult<IEnumerable<Vacation>>> GetVacationsByEmployee(int employeeId)
     {
         var vacations = await _context.Vacations
@@ -41,6 +42,7 @@ public class VacationsController : ControllerBase
 
     // GET: api/vacations/{id}
     [HttpGet("{id}")]
+    [Authorize(Policy = "ManagerOnly")]
     public async Task<ActionResult<Vacation>> GetVacation(int id)
     {
         var vacation = await _context.Vacations.Include(v => v.Employee).FirstOrDefaultAsync(v => v.vacation_id == id);
@@ -55,6 +57,7 @@ public class VacationsController : ControllerBase
 
     // POST: api/vacations
     [HttpPost]
+    [Authorize(Policy = "ManagerOnly")]
     public async Task<ActionResult<Vacation>> AddVacation(Vacation vacation)
     {
         // Sprawdzenie, czy istnieje pracownik
@@ -86,6 +89,7 @@ public class VacationsController : ControllerBase
 
     // PUT: api/vacations/{id}
     [HttpPut("{id}")]
+    [Authorize(Policy = "ManagerOnly")]
     public async Task<IActionResult> UpdateVacation(int id, Vacation updatedVacation)
     {
         if (id != updatedVacation.vacation_id)
@@ -109,6 +113,7 @@ public class VacationsController : ControllerBase
 
     // DELETE: api/vacations/{id}
     [HttpDelete("{id}")]
+    [Authorize(Policy = "ManagerOnly")]
     public async Task<IActionResult> DeleteVacation(int id)
     {
         var vacation = await _context.Vacations.FirstOrDefaultAsync(v => v.vacation_id == id);

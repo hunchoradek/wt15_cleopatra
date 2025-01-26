@@ -57,6 +57,14 @@
               "target": "Package",
               "version": "[4.0.3, )"
             },
+            "FluentEmail.Core": {
+              "target": "Package",
+              "version": "[3.0.2, )"
+            },
+            "FluentEmail.Smtp": {
+              "target": "Package",
+              "version": "[3.0.2, )"
+            },
             "Hangfire.AspNetCore": {
               "target": "Package",
               "version": "[1.8.17, )"

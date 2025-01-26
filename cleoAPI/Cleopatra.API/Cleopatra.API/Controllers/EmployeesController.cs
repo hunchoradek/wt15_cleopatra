@@ -336,7 +336,8 @@ namespace Cleopatra.API.Controllers
                     a.start_time,
                     a.end_time,
                     a.status,
-                    a.appointment_date
+                    a.appointment_date,
+                    a.employee_name
                 });
 
             return Ok(await schedule.ToListAsync());

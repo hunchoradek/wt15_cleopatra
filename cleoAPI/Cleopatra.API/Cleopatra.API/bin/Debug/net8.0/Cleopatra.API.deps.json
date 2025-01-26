@@ -10,6 +10,8 @@
         "dependencies": {
           "BCrypt.Net-Next": "4.0.3",
           "Cleopatra.Application": "1.0.0",
+          "FluentEmail.Core": "3.0.2",
+          "FluentEmail.Smtp": "3.0.2",
           "Hangfire.AspNetCore": "1.8.17",
           "Hangfire.MySql": "0.0.7",
           "Microsoft.EntityFrameworkCore.Design": "8.0.10",
@@ -55,6 +57,28 @@
           "lib/net45/FluentAssertions.dll": {
             "assemblyVersion": "4.1.0.0",
             "fileVersion": "4.1.0.0"
+          }
+        }
+      },
+      "FluentEmail.Core/3.0.2": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentEmail.Core.dll": {
+            "assemblyVersion": "3.0.2.0",
+            "fileVersion": "3.0.2.0"
+          }
+        }
+      },
+      "FluentEmail.Smtp/3.0.2": {
+        "dependencies": {
+          "FluentEmail.Core": "3.0.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentEmail.Smtp.dll": {
+            "assemblyVersion": "3.0.2.0",
+            "fileVersion": "3.0.2.0"
           }
         }
       },
@@ -1644,6 +1668,20 @@
       "sha512": "sha512-Svj/wSajXH09EEHk0a+H1MMbMCaH6M6j92wPa7EM2OhK2/K2yW7PDfJqLKy84+Lu6CGi6c2/cQ4qgyub0H1Dsg==",
       "path": "fluentassertions/4.1.0",
       "hashPath": "fluentassertions.4.1.0.nupkg.sha512"
+    },
+    "FluentEmail.Core/3.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-uQFFbJgMhhCFUti7pfMi429fMNi7fLGMj+7uDtD7POlQzLxlhXJ6tmt4Y1SI51sZsA36GO5b7+o29eY/dKiICQ==",
+      "path": "fluentemail.core/3.0.2",
+      "hashPath": "fluentemail.core.3.0.2.nupkg.sha512"
+    },
+    "FluentEmail.Smtp/3.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Y5pZKS/mXSl7D5WJWecvfo1kpIMDc6U0VRU6wRbE9wEv2IqMH3cQXa/97Pwi+m31COepIqc6dMhGMtAJ2Qh7rw==",
+      "path": "fluentemail.smtp/3.0.2",
+      "hashPath": "fluentemail.smtp.3.0.2.nupkg.sha512"
     },
     "Google.Protobuf/3.26.1": {
       "type": "package",

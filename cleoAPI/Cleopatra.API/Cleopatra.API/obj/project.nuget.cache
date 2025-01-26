@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "mq9eWnIFWxp/DK41KSFs+xWkQDOmKf4CKd2tg4NDQQK2xZzo/O1pesJZQqkousx9QrcNcwoAiWNzD4HzDQycew==",
+  "dgSpecHash": "L92wJtRcPgDvn6IgcYTbBJpPMFocfJxkgcTJvN02XqWj9d5JmUXAA8071LWYUZAO12xl6W9baY/2yg/xmlws7Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\Radek\\Documents\\wt15_cleopatra\\cleoAPI\\Cleopatra.API\\Cleopatra.API\\Cleopatra.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Radek\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\Radek\\.nuget\\packages\\bouncycastle.cryptography\\2.3.1\\bouncycastle.cryptography.2.3.1.nupkg.sha512",
     "C:\\Users\\Radek\\.nuget\\packages\\fluentassertions\\4.1.0\\fluentassertions.4.1.0.nupkg.sha512",
+    "C:\\Users\\Radek\\.nuget\\packages\\fluentemail.core\\3.0.2\\fluentemail.core.3.0.2.nupkg.sha512",
+    "C:\\Users\\Radek\\.nuget\\packages\\fluentemail.smtp\\3.0.2\\fluentemail.smtp.3.0.2.nupkg.sha512",
     "C:\\Users\\Radek\\.nuget\\packages\\google.protobuf\\3.26.1\\google.protobuf.3.26.1.nupkg.sha512",
     "C:\\Users\\Radek\\.nuget\\packages\\hangfire.aspnetcore\\1.8.17\\hangfire.aspnetcore.1.8.17.nupkg.sha512",
     "C:\\Users\\Radek\\.nuget\\packages\\hangfire.core\\1.8.17\\hangfire.core.1.8.17.nupkg.sha512",

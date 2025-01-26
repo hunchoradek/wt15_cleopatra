@@ -4,6 +4,10 @@ using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Cleopatra.API.Services;
 using Microsoft.Extensions.Logging;
+using FluentEmail.Core;
+using FluentEmail.Smtp;
+using System.Net.Mail;
+using System.Net;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -46,8 +50,17 @@ builder.Services.AddAuthorization(options =>
     options.AddPolicy("ManagerOnly", policy => policy.RequireRole("manager"));
 });
 
+// Konfiguracja FluentEmail
+builder.Services.AddFluentEmail(builder.Configuration["EmailSettings:FromEmail"], builder.Configuration["EmailSettings:FromName"])
+    .AddSmtpSender(() => new SmtpClient(builder.Configuration["EmailSettings:SmtpHost"], int.Parse(builder.Configuration["EmailSettings:SmtpPort"]))
+    {
+        Credentials = new NetworkCredential(builder.Configuration["EmailSettings:SmtpUser"], builder.Configuration["EmailSettings:SmtpPass"]),
+        EnableSsl = true
+    });
+
 // Register services
 builder.Services.AddScoped<NotificationService>();
+builder.Services.AddScoped<EmailService>();
 
 builder.Services.AddControllers()
     .AddJsonOptions(options =>
