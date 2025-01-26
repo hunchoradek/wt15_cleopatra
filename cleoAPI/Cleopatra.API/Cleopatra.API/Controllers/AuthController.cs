@@ -73,12 +73,21 @@ namespace Cleopatra.API.Controllers
                 return Unauthorized("No active session.");
             }
 
+            // Odczytaj employee_id z claimów
+            var employeeIdClaim = User.FindFirst("employee_id");
+            if (employeeIdClaim == null)
+            {
+                return Unauthorized("Employee ID not found in claims.");
+            }
+
             return Ok(new
             {
                 username = User.Identity.Name,
-                role = User.FindFirst(ClaimTypes.Role)?.Value
+                role = User.FindFirst(ClaimTypes.Role)?.Value,
+                employee_id = int.Parse(employeeIdClaim.Value) // Zwróć ID pracownika
             });
         }
+
     }
 
     public class LoginRequest
